@@ -221,8 +221,9 @@ audio {
   left: 0;
   opacity: 1;
   width: 100%;
-  height: 100%;
+  height: 100dvh;
   overflow: hidden;
+  transition: ease-in-out;
   animation: olas 20000ms infinite;
 }
 #hero .opacidad {
@@ -230,7 +231,7 @@ audio {
   left: 0;
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 100dvh;
   overflow: hidden;
   background: linear-gradient(
     180deg,
@@ -290,7 +291,7 @@ audio {
 #planos {
   width: 100%;
   overflow: hidden;
-  padding: 5% 0;
+  padding: 3% 0 5% 0;
   background: url(../media/img/comun/bg-descripcion-proyecto.png) repeat;
 }
 #planos .container .titulo-seccion {
@@ -318,8 +319,11 @@ audio {
   stroke-width: 1;
   stroke-dasharray: 500;
   fill-opacity: 0;
-  transition: 0.5s;
-  animation: estructura 4s ease-in-out forwards;
+  transition: 2s;
+  animation: estructura 8s ease-in-out forwards;
+}
+#playa-sol-y-arena {
+  padding: 5% 0;
 }
 #silenciarMar {
   display: block;
@@ -354,40 +358,47 @@ audio {
 @keyframes estructura {
   0% {
     stroke-dashoffset: 500;
+    transition: ease-in-out;
   }
   60% {
     stroke-dashoffset: 0;
     fill-opacity: 0;
+    transition: ease-in-out;
   }
   100% {
     stroke-dashoffset: 0;
     fill-opacity: 0;
+    transition: ease-in-out;
   }
 }
 @keyframes ocultarEstructura {
   0% {
     stroke-dashoffset: 0;
     fill-opacity: 0;
+    transition: ease-in-out;
   }
   50% {
     stroke-dashoffset: 0;
     fill-opacity: 0;
+    transition: ease-in-out;
   }
   100% {
     stroke-dashoffset: 500;
+    transition: ease-in-out;
   }
 }
 @keyframes entradaArriba {
   0% {
-    stroke-dashoffset: 0;
-    fill-opacity: 0;
+    transform: scale(0, 0) translate(-10%);
+    opacity: 0;
   }
   50% {
-    stroke-dashoffset: 0;
-    fill-opacity: 0;
+    transform: scale(0.5, 0.5) translate(-5%);
+    opacity: 0.5;
   }
   100% {
-    stroke-dashoffset: 500;
+    transform: scale(1, 1) translate(0);
+    opacity: 1;
   }
 }
 @media (max-width: 550px) {

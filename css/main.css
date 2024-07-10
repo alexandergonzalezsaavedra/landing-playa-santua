@@ -60,7 +60,7 @@ audio {
 #menu .logo-ar-construcciones {
   position: absolute;
   margin-right: auto;
-  margin-left: 2%;
+  margin-left: 30px;
   filter: drop-shadow(0 1px 5px rgba(0, 0, 0, 0.5));
 }
 #menu #burger-toggle {
@@ -163,7 +163,7 @@ audio {
   display: block;
   position: relative;
   margin-left: auto;
-  margin-right: 5%;
+  margin-right: 30px;
   width: var(--burger-menu-radius);
   height: var(--burger-menu-radius);
   outline: none;
@@ -272,7 +272,7 @@ audio {
 #hero .slogan .texto-slogan {
   position: absolute;
   bottom: 10%;
-  left: 5%;
+  left: 50px;
 }
 #hero .slogan .texto-slogan p {
   color: #fff;
@@ -383,7 +383,7 @@ audio {
   border-radius: 0;
   width: auto;
   left: auto;
-  right: 5%;
+  right: 40px;
   background: rgba(121, 151, 149, 1);
   color: var(--verde-limon);
   bottom: 3%;

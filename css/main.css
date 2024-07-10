@@ -312,7 +312,7 @@ audio {
 }
 #planos .container .diferencial {
   width: 100%;
-  margin: 10% 0;
+  margin: 50px 0;
   padding-left: 30px;
   overflow-x: hidden;
   border-left: solid 1px var(--verde-bg);

@@ -1,0 +1,432 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+@font-face {
+  font-family: Zodiak-Bold;
+  src: url(../fuentes/Zodiak-Bold.otf) format("truetype");
+}
+:root {
+  --fuente-zodiak: Zodiak-Bold;
+  --fuente-jakarta: "Plus Jakarta Sans", sans-serif;
+  --verde-oliva: #545a53;
+  --verde-bg: #799795;
+  --verde-limon: #c7dea9;
+  --gris: #dedfdf;
+}
+html {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+body {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  background: url(../media/img/comun/bg.png) repeat;
+  font-family: var(--fuente-jakarta);
+}
+audio {
+  position: absolute;
+  z-index: -10;
+  top: 0;
+}
+/*comun*/
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+.ocultarMenuModal {
+  opacity: 0;
+  transform: scale(0);
+  transition: 5s;
+}
+.modal.show {
+  opacity: 1;
+  transform: scale(1);
+  transition: 0.5s;
+}
+#menu {
+  position: fixed;
+  display: block;
+  top: 0;
+  width: 100%;
+  z-index: 5;
+}
+#menu .logo-ar-construcciones {
+  position: absolute;
+  margin-right: auto;
+  margin-left: 2%;
+  filter: drop-shadow(0 1px 5px rgba(0, 0, 0, 0.5));
+}
+#menu #burger-toggle {
+  appearance: none;
+  opacity: 0;
+}
+#menu span {
+  position: relative;
+  z-index: 0;
+}
+#menu .overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 0;
+  transform: translateX(150%);
+  padding-top: 80px;
+  width: 100%;
+  height: 100dvh;
+  background: #000000;
+  opacity: 0;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+}
+#menu .overlay .logo-proyecto-menu {
+  width: 70%;
+}
+#menu .overlay .logo-proyecto-menu svg {
+  margin-top: 10%;
+  margin-bottom: 15%;
+  fill: #ffffff;
+  filter: drop-shadow(0 1px 5px rgba(0, 0, 0, 0.5));
+}
+#menu .overlay .botones-menu {
+  width: 100%;
+}
+#menu .overlay .botones-menu .enlaceMenu {
+  display: block;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 20px;
+}
+#menu .overlay .botones-menu .enlaceMenu:hover {
+  color: var(--verde-limon);
+}
+#menu .overlay .opacidad {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: auto;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: linear-gradient(
+    180deg,
+    rgba(23, 23, 23, 0.7) 0%,
+    rgba(23, 23, 23, 0.4) 50%,
+    rgba(23, 23, 23, 0.7) 100%
+  );
+}
+#menu .overlay .enlaces {
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+}
+#menu .overlay img {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  right: 0;
+  left: auto;
+  opacity: 0.3;
+  width: 100%;
+}
+#menu #burger-toggle:checked ~ .overlay {
+  top: 0;
+  margin-right: 0;
+  transform: translateX(0);
+  overflow: hidden;
+  width: 100%;
+  height: 100dvh;
+  opacity: 1;
+  transition: 1.5s ease-in-out;
+}
+#menu #burger-toggle:checked ~ .burger-menu .line:nth-child(1) {
+  background: rgba(255, 255, 255, 1);
+  transform: translateY(calc(var(--burger-menu-radius) / 5)) rotate(45deg);
+}
+#menu #burger-toggle:checked ~ .burger-menu .line:nth-child(2) {
+  transform: scaleX(0);
+}
+#menu #burger-toggle:checked ~ .burger-menu .line:nth-child(3) {
+  background: rgba(255, 255, 255, 1);
+  transform: translateY(calc(var(--burger-menu-radius) / -5)) rotate(-45deg);
+}
+#menu .burger-menu {
+  --burger-menu-radius: 4em;
+  display: block;
+  position: relative;
+  margin-left: auto;
+  margin-right: 5%;
+  width: var(--burger-menu-radius);
+  height: var(--burger-menu-radius);
+  outline: none;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+  z-index: 100;
+}
+#menu .burger-menu .line {
+  position: absolute;
+  left: auto;
+  right: 25%;
+  width: 50%;
+  height: 3px;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+#menu .burger-menu .line:nth-child(1) {
+  top: 30%;
+}
+#menu .burger-menu .line:nth-child(2) {
+  top: 50%;
+}
+#menu .burger-menu .line:nth-child(3) {
+  top: 70%;
+}
+#menu .burger-menu .line::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: auto;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 1);
+  transform: translateX(-100%);
+  transition: all 0.25s ease;
+}
+#menu .burger-menu .line:nth-child(2)::after {
+  transition-delay: 0.1s;
+}
+#menu .burger-menu .line:nth-child(3)::after {
+  transition-delay: 0.2s;
+}
+#menu .burger-menu:hover .line::after {
+  transform: translateX(0);
+}
+#hero {
+  position: relative;
+  width: 100%;
+  height: 100dvh;
+  z-index: 0;
+  overflow: hidden;
+}
+#hero img.fondo {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  animation: olas 20000ms infinite;
+}
+#hero .opacidad {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: linear-gradient(
+    180deg,
+    rgba(23, 23, 23, 0.3) 0%,
+    rgba(23, 23, 23, 0.2) 70%,
+    rgba(23, 23, 23, 0.8) 100%
+  );
+}
+#hero .nombre-proyecto {
+  text-align: center;
+}
+#hero .nombre-proyecto svg {
+  position: relative;
+  width: 80%;
+  margin: auto;
+  margin-top: -5%;
+  fill: #fff;
+  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7));
+  z-index: 10;
+}
+#hero .nombre-proyecto .letra-logo {
+  fill: #ffffff !important;
+}
+#hero .slogan {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 10;
+}
+#hero .slogan .texto-slogan {
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+}
+#hero .slogan .texto-slogan p {
+  color: #fff;
+  margin: 0;
+  text-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+#hero .slogan p:nth-child(1) {
+  font-size: 50px;
+  font-family: var(--fuente-zodiak);
+}
+#hero .slogan p:nth-child(2) {
+  font-size: 90px;
+  margin-top: -50px;
+  margin-bottom: -20px;
+  margin-left: 79px;
+  font-family: var(--fuente-zodiak);
+}
+#hero .slogan p:nth-child(3) {
+  font-size: 20px;
+  letter-spacing: 5px;
+  font-style: italic;
+}
+#planos {
+  width: 100%;
+  overflow: hidden;
+  padding: 5% 0;
+  background: url(../media/img/comun/bg-descripcion-proyecto.png) repeat;
+}
+#planos .container .titulo-seccion {
+  font-size: 60px;
+}
+#planos .container svg {
+  width: 100%;
+}
+#planos .container .diferencial {
+  width: 100%;
+  margin: 10% 0;
+  padding-left: 30px;
+  border-left: solid 1px var(--verde-bg);
+  color: var(--verde-oliva);
+}
+.ocultarEstructura {
+  opacity: 0;
+  transition: 0.5s;
+}
+.estructura {
+  opacity: 1;
+  transform-box: fill-box;
+  transform-origin: center;
+  stroke: #545a53;
+  stroke-width: 1;
+  stroke-dasharray: 500;
+  fill-opacity: 0;
+  transition: 0.5s;
+  animation: estructura 4s ease-in-out forwards;
+}
+#silenciarMar {
+  display: block;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 0;
+  top: auto;
+  bottom: 50%;
+  left: auto;
+  right: 3%;
+  width: 40px;
+  height: 40px;
+  color: #fff;
+  font-size: 25px;
+  text-shadow: 3px 4px 7px rgba(0, 0, 0, 0.5);
+  z-index: 5;
+}
+/*Animaciones*/
+@keyframes olas {
+  0% {
+    transform: scale(1, 1) translate(0, 0);
+  }
+
+  50% {
+    transform: scale(1.1, 1.2) translate(0, -1%);
+  }
+
+  100% {
+    transform: scale(1, 1) translate(0, 0);
+  }
+}
+@keyframes estructura {
+  0% {
+    stroke-dashoffset: 500;
+  }
+  60% {
+    stroke-dashoffset: 0;
+    fill-opacity: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill-opacity: 0;
+  }
+}
+@keyframes ocultarEstructura {
+  0% {
+    stroke-dashoffset: 0;
+    fill-opacity: 0;
+  }
+  50% {
+    stroke-dashoffset: 0;
+    fill-opacity: 0;
+  }
+  100% {
+    stroke-dashoffset: 500;
+  }
+}
+@keyframes entradaArriba {
+  0% {
+    stroke-dashoffset: 0;
+    fill-opacity: 0;
+  }
+  50% {
+    stroke-dashoffset: 0;
+    fill-opacity: 0;
+  }
+  100% {
+    stroke-dashoffset: 500;
+  }
+}
+@media (max-width: 550px) {
+  #menu .overlay img {
+    width: auto;
+    height: 100dvh;
+    left: -40%;
+  }
+  #menu .logo-ar-construcciones img {
+    width: 150px;
+  }
+  #hero .nombre-proyecto svg {
+    width: 100%;
+  }
+  #hero .slogan p:nth-child(1) {
+    font-size: 30px;
+  }
+  #hero .slogan p:nth-child(2) {
+    font-size: 60px;
+    margin-top: -32px;
+    margin-left: 35px;
+  }
+  #hero .slogan p:nth-child(3) {
+    font-size: 13px;
+  }
+  #silenciarMar {
+    bottom: 35%;
+  }
+}
+
+/* #hero .nombre-proyecto {
+  position: relative;
+  width: 100%;
+  top: auto;
+}
+#hero .nombre-proyecto h1 {
+  font-size: 80px;
+  color: #ffffff;
+  text-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  font-family: Zodiak-Bold;
+} */

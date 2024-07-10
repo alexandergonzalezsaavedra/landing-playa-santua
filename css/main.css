@@ -488,9 +488,13 @@ audio {
   }
   .btn-registro {
     justify-content: center;
+    width: 100%;
   }
   .btn-registro button {
     width: 90%;
+    margin: auto;
+    right: auto;
+    left: auto;
   }
 }
 /* #hero .nombre-proyecto {

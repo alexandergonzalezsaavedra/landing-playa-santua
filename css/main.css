@@ -253,7 +253,9 @@ audio {
   z-index: 10;
 }
 #hero .nombre-proyecto .letra-logo {
-  fill: #ffffff !important;
+  transition: ease-in;
+  animation: entrada 5000ms;
+  fill: #ffffff;
 }
 #hero .slogan {
   position: absolute;
@@ -271,6 +273,8 @@ audio {
   color: #fff;
   margin: 0;
   text-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  transition: 0.5s;
+  animation: entrada 5000ms ease-in-out;
 }
 #hero .slogan p:nth-child(1) {
   font-size: 50px;
@@ -387,17 +391,17 @@ audio {
     transition: ease-in-out;
   }
 }
-@keyframes entradaArriba {
+@keyframes entrada {
   0% {
-    transform: scale(0, 0) translate(-10%);
+    bottom: -100%;
     opacity: 0;
   }
   50% {
-    transform: scale(0.5, 0.5) translate(-5%);
+    bottom: -50%;
     opacity: 0.5;
   }
   100% {
-    transform: scale(1, 1) translate(0);
+    bottom: 0;
     opacity: 1;
   }
 }

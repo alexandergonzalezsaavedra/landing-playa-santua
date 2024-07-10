@@ -8,14 +8,16 @@ let burgerToggle = document.querySelector("#burger-toggle");
 const solenciarMar = () => {
     if (audio.classList.contains("silenciar")) {
         audio.classList.remove("silenciar");
+        audio.play()
         audio.volume = 0.20;
-        iconoSonido.classList.add("fa-volume-low");
-        iconoSonido.classList.remove("fa-volume-xmark");
+        iconoSonido.classList.remove("fa-volume-low");
+        iconoSonido.classList.add("fa-volume-xmark");
     } else {
         audio.classList.add("silenciar");
         audio.volume = 0.00;
-        iconoSonido.classList.remove("fa-volume-low");
-        iconoSonido.classList.add("fa-volume-xmark");
+        audio.pause()
+        iconoSonido.classList.add("fa-volume-low");
+        iconoSonido.classList.remove("fa-volume-xmark");
     }
 }
 document.addEventListener("click", (e) => {

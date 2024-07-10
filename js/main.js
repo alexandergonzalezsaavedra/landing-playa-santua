@@ -1,9 +1,4 @@
-
 document.querySelector("#sonidoOceano").volume = 0.20;
-const playAudio = () => {
-    document.querySelector("#sonidoOceano").play()
-}
-playAudio()
 const estructura = document.querySelector("#activar-animacion-estructura")
 let pathsEstructura = document.querySelectorAll(".animacionEstructura")
 let pathEstructuraUno = estructura.querySelector("#estructuraUno")

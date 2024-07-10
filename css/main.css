@@ -9,6 +9,7 @@
   --verde-oliva: #545a53;
   --verde-bg: #799795;
   --verde-limon: #c7dea9;
+  --verde-oscuro: #092d32;
   --gris: #dedfdf;
 }
 html {
@@ -16,6 +17,7 @@ html {
   height: auto;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 body {
   width: 100%;
@@ -351,7 +353,47 @@ audio {
   text-shadow: 3px 4px 7px rgba(0, 0, 0, 0.5);
   z-index: 5;
 }
-/*Animaciones*/
+.contenedorFormulario .modal-content {
+  border-radius: 0;
+  padding: 5% 0;
+  text-align: center;
+  background-color: var(--verde-oscuro);
+}
+.contenedorFormulario .modal-content .modal-header {
+  border: none;
+  text-align: center;
+}
+.contenedorFormulario .modal-content .modal-header h3 {
+  margin: auto;
+  font-family: var(--fuente-zodiak);
+  color: var(--verde-limon);
+}
+.contenedorFormulario .modal-content .modal-body {
+  border: none;
+  color: #ffffff;
+}
+.btn-registro {
+  display: flex;
+  justify-content: end;
+  z-index: 15;
+}
+.btn-registro button {
+  position: fixed;
+  padding: 5px 15px;
+  border-radius: 0;
+  width: auto;
+  left: auto;
+  right: 5%;
+  background: rgba(121, 151, 149, 1);
+  color: var(--verde-limon);
+  bottom: 3%;
+  font-size: 20px;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+.btn-registro button:hover {
+  background: rgba(121, 151, 149, 0.5);
+  color: #ffffff;
+}
 @keyframes olas {
   0% {
     transform: scale(1, 1) translate(0, 0);
@@ -423,6 +465,9 @@ audio {
   #hero .nombre-proyecto svg {
     width: 100%;
   }
+  #hero .slogan .texto-slogan {
+    bottom: 15%;
+  }
   #hero .slogan p:nth-child(1) {
     font-size: 30px;
   }
@@ -440,6 +485,12 @@ audio {
   }
   #silenciarMar {
     bottom: 35%;
+  }
+  .btn-registro {
+    justify-content: center;
+  }
+  .btn-registro button {
+    width: 90%;
   }
 }
 /* #hero .nombre-proyecto {

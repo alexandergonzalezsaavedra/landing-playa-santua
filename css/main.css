@@ -411,10 +411,6 @@ audio {
   }
 }
 @media (max-width: 550px) {
-  .container {
-    padding: 0;
-    margin: 0;
-  }
   #menu .overlay img {
     width: auto;
     height: 100dvh;

@@ -22,12 +22,15 @@ body {
   height: auto;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
   background: url(../media/img/comun/bg.png) repeat;
   font-family: var(--fuente-jakarta);
 }
 audio {
   position: absolute;
   z-index: -10;
+  width: 40px;
+  height: 40px;
   top: 0;
 }
 /*comun*/
@@ -273,7 +276,7 @@ audio {
   color: #fff;
   margin: 0;
   text-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
-  transition: 0.5s;
+  transition: 1s;
   animation: entrada 5000ms ease-in-out;
 }
 #hero .slogan p:nth-child(1) {
@@ -308,12 +311,14 @@ audio {
   width: 100%;
   margin: 10% 0;
   padding-left: 30px;
+  overflow-x: hidden;
   border-left: solid 1px var(--verde-bg);
   color: var(--verde-oliva);
 }
 .ocultarEstructura {
   opacity: 0;
   transition: 0.5s;
+  overflow-x: hidden;
 }
 .estructura {
   opacity: 1;
@@ -406,13 +411,17 @@ audio {
   }
 }
 @media (max-width: 550px) {
+  .container {
+    padding: 0;
+    margin: 0;
+  }
   #menu .overlay img {
     width: auto;
     height: 100dvh;
     left: -40%;
   }
   #menu .logo-ar-construcciones img {
-    width: 150px;
+    width: 125px;
   }
   #hero .nombre-proyecto svg {
     width: 100%;
@@ -427,6 +436,9 @@ audio {
   }
   #hero .slogan p:nth-child(3) {
     font-size: 13px;
+  }
+  #planos .container svg {
+    width: 80%;
   }
   #silenciarMar {
     bottom: 35%;

@@ -298,7 +298,7 @@ audio {
 #planos {
   width: 100%;
   overflow: hidden;
-  padding: 3% 0 5% 0;
+  padding: 3% 0 0;
   background: url(../media/img/comun/bg-descripcion-proyecto.png) repeat;
 }
 #planos .container .titulo-seccion {
@@ -306,6 +306,7 @@ audio {
 }
 #planos .container svg {
   width: 100%;
+  margin: auto;
 }
 #planos .container .diferencial {
   width: 100%;
@@ -434,13 +435,13 @@ audio {
     font-size: 13px;
   }
   #planos .container svg {
-    width: 80%;
+    margin: auto;
+    width: 100%;
   }
   #silenciarMar {
     bottom: 35%;
   }
 }
-
 /* #hero .nombre-proyecto {
   position: relative;
   width: 100%;

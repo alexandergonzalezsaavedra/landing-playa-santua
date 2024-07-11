@@ -50,6 +50,12 @@ audio {
   transform: scale(1);
   transition: 0.5s;
 }
+.titulo-seccion {
+  text-align: center;
+  font-size: 40px;
+  color: var(--verde-oliva);
+  font-family: var(--fuente-zodiak);
+}
 #menu {
   position: fixed;
   display: block;
@@ -328,16 +334,13 @@ audio {
   padding: 3% 0;
   background: url(../media/img/comun/bg-descripcion-proyecto.png) repeat;
 }
-#detalles .container .titulo-seccion {
-  font-size: 60px;
-}
 #detalles .container svg {
   width: 100%;
   margin: auto;
 }
 #detalles .container .diferencial {
   width: 100%;
-  margin: 50px 0;
+  margin: 30px 0;
   padding-left: 30px;
   overflow-x: hidden;
   border-left: solid 1px var(--verde-bg);
@@ -360,7 +363,18 @@ audio {
   animation: estructura 8s ease-in-out forwards;
 }
 #playa-sol-y-arena {
-  padding: 5% 0;
+  padding: 5% 0 3% 0;
+}
+#playa-sol-y-arena .contenedor-galeria .btn-imagen-full {
+  margin: 10px 0;
+}
+#playa-sol-y-arena .contenedor-galeria .btn-imagen-full img {
+  border-radius: 5px;
+  transition: 0.5s;
+}
+#playa-sol-y-arena .contenedor-galeria .btn-imagen-full img:hover {
+  transition: 0.5s;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
 #silenciarMar {
   display: block;
@@ -419,7 +433,7 @@ audio {
   color: var(--verde-limon);
 }
 #ubicacion {
-  padding: 5% 0;
+  padding: 3% 0;
 }
 #ubicacion iframe {
   position: relative;
@@ -539,6 +553,9 @@ footer .datos-contacto .contacto p strong a:hover {
   }
 }
 @media (max-width: 550px) {
+  .titulo-seccion {
+    font-size: 20px;
+  }
   #menu .burger-menu {
     margin-right: 0;
     margin-top: -10px;
@@ -565,18 +582,22 @@ footer .datos-contacto .contacto p strong a:hover {
   }
   #hero .slogan .texto-slogan p span {
     display: block;
-    width: 100%;
+    /* width: 100%; */
   }
   #hero .slogan p:nth-child(1) {
     font-size: 30px;
   }
   #hero .slogan p:nth-child(2) {
-    font-size: 60px;
-    margin-top: -32px;
-    margin-left: 35px;
+    font-size: 50px;
+    margin-top: -28px;
+    margin-left: 60px;
   }
   #hero .slogan p:nth-child(3) {
-    font-size: 13px;
+    width: 100%;
+    font-size: 12px;
+    margin-top: 5px;
+    margin-left: 15px;
+    text-align: center;
   }
   #detalles .container svg {
     margin: auto;

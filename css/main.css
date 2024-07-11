@@ -640,6 +640,21 @@ footer .datos-contacto .contacto p strong a:hover {
     margin: auto;
     width: 100%;
   }
+  #playa-sol-y-arena .nav-pills .nav-link,
+  #playa-sol-y-arena .nav-pills .show > .nav-link {
+    padding: 3px;
+    margin: 10px 0;
+    background-color: #ffffff;
+    transition: 0.3s;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  }
+  #playa-sol-y-arena .nav-pills .nav-link p {
+    color: var(--verde-oliva);
+    padding-bottom: 10px;
+  }
+  #playa-sol-y-arena .nav-pills .nav-link p i {
+    color: var(--verde-limon);
+  }
   #silenciarMar {
     bottom: 35%;
     right: 20px;

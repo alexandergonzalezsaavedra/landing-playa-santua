@@ -378,6 +378,70 @@
                                 Llena el siguiente formulario y da el primer paso hacia el hogar de tus sueños. Nos
                                 pondremos en contacto cuanto antes.
                             </p>
+                            <form id="formulario" class="p-4 rounded-3 form-bg">
+                                <div class="row">
+                                    <div class="col-12 mb-3">
+                                        <input type="text" class="form-control" id="nombre" placeholder="*Nombre" />
+                                        <div id="nombre-error" class="error-message"></div>
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <input type="text" class="form-control" id="apellido" placeholder="*Apellido" />
+                                        <div id="apellido-error" class="error-message"></div>
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <input type="text" class="form-control" id="ciudad" placeholder="*Ciudad" />
+                                        <div id="ciudad-error" class="error-message"></div>
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <input type="email" class="form-control" id="correo"
+                                            placeholder="*Correo electrónico" />
+                                        <div id="correo-error" class="error-message"></div>
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <input type="tel" class="form-control" id="telefono" placeholder="*Teléfono" />
+                                        <div id="telefono-error" class="error-message"></div>
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <select class="form-select" id="valor-compra">
+                                            <option selected value="">*Me interesa un Apartamento entre</option>
+                                            <option value="Entre 400 y 700 millones COP">Entre 400 y 700 millones COP
+                                            </option>
+                                            <option value="Entre 700 y 1000 millones COP">Entre 700 y 1000 millones COP
+                                            </option>
+                                            <option value="Entre 1000 y 1500 millones COP">Entre 1000 y 1500 millones
+                                                COP
+                                            </option>
+                                            <option value="Más de 2000 millones COP">Más de 1500 millones COP</option>
+                                        </select>
+                                        <div id="valor-compra-error" class="error-message"></div>
+                                    </div>
+                                    <div class="col-12 mb-3">
+                                        <select class="form-select" id="tiempo-compra">
+                                            <option selected value="">*Estoy pensando en comprar en</option>
+                                            <option value="DENTRO DE LOS PROXIMOS 30 DIAS">Dentro de los próximos 30
+                                                días
+                                            </option>
+                                            <option value="EN 2 O 3 MESES">En 2 o 3 meses</option>
+                                            <option value="DE 3 A 6 MESES">De 3 a 6 meses</option>
+                                            <option value="EN MAS DE 6 MESES">En más de 6 meses</option>
+                                        </select>
+                                        <div id="tiempo-compra-error" class="error-message"></div>
+                                    </div>
+                                    <div class="checkbox mb-3">
+                                        <label>
+                                            <input type="checkbox" value="accept" required id="terminos-condiciones" />
+                                            <a href="https://storeproyectoar.blob.core.windows.net/ar-multimedia-resources-container/CLAUSULA-DE-CONSENTIMIENTO.pdf"
+                                                target="_blank">He leído y acepto la cláusula de consentimiento web.</a>
+                                            <div id="checkbox-error" class="error-message"></div>
+                                        </label>
+                                    </div>
+                                    <div id="button-error" class="error-message"></div>
+                                    <div id="button-notify" class="notification-message"></div>
+                                    <button class="btn btn-lg btn-danger" type="submit">
+                                        Enviar
+                                    </button>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>

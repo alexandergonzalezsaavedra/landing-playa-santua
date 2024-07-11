@@ -1,4 +1,4 @@
-document.querySelector("#sonidoOceano").volume = 0.30;
+document.querySelector("#sonidoOceano").volume = 0.35;
 const estructura = document.querySelector("#activar-animacion-estructura")
 const menu = document.querySelector("#menu")
 const detalles = document.querySelector("#detalles")

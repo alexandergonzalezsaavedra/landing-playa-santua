@@ -563,6 +563,10 @@ footer .datos-contacto .contacto p strong a:hover {
   #hero .slogan .texto-slogan {
     bottom: 15%;
   }
+  #hero .slogan .texto-slogan p span {
+    display: block;
+    width: 100%;
+  }
   #hero .slogan p:nth-child(1) {
     font-size: 30px;
   }
@@ -581,6 +585,10 @@ footer .datos-contacto .contacto p strong a:hover {
   #silenciarMar {
     bottom: 35%;
     right: 20px;
+  }
+  #ubicacion p {
+    text-align: center;
+    font-size: 13px;
   }
   .btn-registro {
     justify-content: center;

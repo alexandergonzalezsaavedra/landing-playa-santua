@@ -366,14 +366,51 @@ audio {
   padding: 5% 0 3% 0;
 }
 #playa-sol-y-arena .contenedor-galeria .btn-imagen-full {
-  margin: 10px 0;
+  width: 100%;
+  transition: 0.5s;
 }
 #playa-sol-y-arena .contenedor-galeria .btn-imagen-full img {
   border-radius: 5px;
-  transition: 0.5s;
+  transition: 0.3s;
 }
 #playa-sol-y-arena .contenedor-galeria .btn-imagen-full img:hover {
   transition: 0.5s;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+#playa-sol-y-arena .tab-content .info-imagen {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  left: auto;
+  padding: 10px 15px;
+  background: rgba(0, 0, 0, 0.2);
+  color: #fff;
+  text-align: center;
+  border-radius: 10px;
+  text-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+}
+#playa-sol-y-arena .tab-content .tab-pane {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+}
+#playa-sol-y-arena .tab-content .tab-pane img {
+  border-radius: 10px;
+}
+#playa-sol-y-arena .tab-content .info-imagen p {
+  margin: 0;
+  font-size: 13px;
+}
+#playa-sol-y-arena .tab-content .info-imagen p i {
+  width: 20px;
+  color: var(--verde-limon);
+}
+#playa-sol-y-arena .nav-pills .nav-link.active,
+#playa-sol-y-arena .nav-pills .show > .nav-link {
+  padding: 3px;
+  margin: 10px 0;
+  background-color: #ffffff;
+  transition: 0.3s;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
 #silenciarMar {

@@ -57,11 +57,32 @@ audio {
   width: 100%;
   z-index: 5;
 }
+#menu.modoClaro {
+  transition: 0.5s;
+  background-color: rgba(0, 0, 0, 0);
+}
+#menu.modoOscuro {
+  transition: 0.5s;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+#menu.modoOscuro .logo-ar-construcciones img {
+  transition: 0.5s;
+  width: 70px;
+  margin-top: -5px;
+}
+#menu.modoOscuro .burger-menu {
+  transition: 0.5s;
+  margin-top: -25px;
+}
 #menu .logo-ar-construcciones {
   position: absolute;
   margin-right: auto;
   margin-left: 30px;
   filter: drop-shadow(0 1px 5px rgba(0, 0, 0, 0.5));
+}
+#menu .logo-ar-construcciones img {
+  transition: 0.5s;
+  width: 130px;
 }
 #menu #burger-toggle {
   appearance: none;
@@ -104,6 +125,10 @@ audio {
   color: #ffffff;
   text-decoration: none;
   font-size: 20px;
+}
+#menu .overlay .botones-menu .enlaceMenu i {
+  color: var(--verde-bg);
+  width: 30px;
 }
 #menu .overlay .botones-menu .enlaceMenu:hover {
   color: var(--verde-limon);
@@ -297,20 +322,20 @@ audio {
   letter-spacing: 5px;
   font-style: italic;
 }
-#planos {
+#detalles {
   width: 100%;
   overflow: hidden;
   padding: 3% 0;
   background: url(../media/img/comun/bg-descripcion-proyecto.png) repeat;
 }
-#planos .container .titulo-seccion {
+#detalles .container .titulo-seccion {
   font-size: 60px;
 }
-#planos .container svg {
+#detalles .container svg {
   width: 100%;
   margin: auto;
 }
-#planos .container .diferencial {
+#detalles .container .diferencial {
   width: 100%;
   margin: 50px 0;
   padding-left: 30px;
@@ -345,16 +370,15 @@ audio {
   top: auto;
   bottom: 50%;
   left: auto;
-  right: 3%;
+  right: 30px;
   width: 40px;
   height: 40px;
   color: #fff;
   font-size: 25px;
   text-shadow: 3px 4px 7px rgba(0, 0, 0, 0.5);
-  z-index: 5;
+  z-index: 10;
 }
 .contenedorFormulario .modal-content {
-  border-radius: 0;
   padding: 5% 0;
   text-align: center;
   background-color: var(--verde-oscuro);
@@ -380,19 +404,80 @@ audio {
 .btn-registro button {
   position: fixed;
   padding: 5px 15px;
-  border-radius: 0;
   width: auto;
   left: auto;
   right: 40px;
   background: rgba(121, 151, 149, 1);
-  color: var(--verde-limon);
+  color: #ffffff;
   bottom: 3%;
   font-size: 20px;
   text-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  z-index: 100;
 }
 .btn-registro button:hover {
   background: rgba(121, 151, 149, 0.5);
-  color: #ffffff;
+  color: var(--verde-limon);
+}
+#ubicacion {
+  padding: 5% 0;
+}
+#ubicacion iframe {
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  z-index: 0;
+}
+#ubicacion p {
+  color: var(--verde-oliva);
+}
+#ubicacion i {
+  width: 20px;
+  color: var(--verde-bg);
+}
+footer {
+  width: 100%;
+  overflow: hidden;
+  padding: 3% 0;
+  background: url(../media/img/comun/bg-descripcion-proyecto.png) repeat;
+}
+footer .datos-contacto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .datos-contacto .logo {
+  text-align: end;
+  padding-right: 30px;
+}
+footer .datos-contacto .logo img {
+  width: 100px;
+}
+footer .datos-contacto .contacto {
+  text-align: start;
+  padding-left: 30px;
+  border-left: solid 1px var(--verde-oliva);
+}
+footer .datos-contacto .contacto p {
+  margin: 0;
+  padding: 10px 0;
+}
+footer .datos-contacto .contacto p span {
+  font-size: 20px;
+  letter-spacing: 5px;
+}
+footer .datos-contacto .contacto p strong {
+  font-size: 27px;
+  letter-spacing: 5px;
+}
+footer .datos-contacto .contacto p strong a {
+  text-decoration: none;
+  color: var(--verde-oliva);
+  transition: 0.5s;
+}
+footer .datos-contacto .contacto p strong a:hover {
+  text-decoration: none;
+  color: var(--verde-oscuro);
+  transition: 0.5s;
 }
 @keyframes olas {
   0% {
@@ -454,13 +539,23 @@ audio {
   }
 }
 @media (max-width: 550px) {
+  #menu .burger-menu {
+    margin-right: 0;
+    margin-top: -10px;
+  }
+  #menu .overlay .botones-menu .enlaceMenu {
+    font-size: 15px;
+  }
   #menu .overlay img {
     width: auto;
     height: 100dvh;
     left: -40%;
   }
+  #menu .logo-ar-construcciones {
+    margin-left: 0;
+  }
   #menu .logo-ar-construcciones img {
-    width: 125px;
+    width: 100px;
   }
   #hero .nombre-proyecto svg {
     width: 100%;
@@ -479,12 +574,13 @@ audio {
   #hero .slogan p:nth-child(3) {
     font-size: 13px;
   }
-  #planos .container svg {
+  #detalles .container svg {
     margin: auto;
     width: 100%;
   }
   #silenciarMar {
     bottom: 35%;
+    right: 20px;
   }
   .btn-registro {
     justify-content: center;
@@ -496,16 +592,24 @@ audio {
     right: auto;
     left: auto;
   }
+  footer .datos-contacto {
+    flex-direction: column;
+  }
+  footer .datos-contacto .logo {
+    text-align: center;
+    padding-right: 0;
+  }
+  footer .datos-contacto .contacto {
+    text-align: center;
+    padding-left: 0;
+    border-left: none;
+    border-top: solid 1px var(--verde-oliva);
+    margin-bottom: 70px;
+  }
+  footer .datos-contacto .contacto p span {
+    font-size: 15px;
+  }
+  footer .datos-contacto .contacto p strong {
+    font-size: 18px;
+  }
 }
-/* #hero .nombre-proyecto {
-  position: relative;
-  width: 100%;
-  top: auto;
-}
-#hero .nombre-proyecto h1 {
-  font-size: 80px;
-  color: #ffffff;
-  text-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
-  text-align: center;
-  font-family: Zodiak-Bold;
-} */

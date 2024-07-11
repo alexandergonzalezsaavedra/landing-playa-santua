@@ -18,12 +18,13 @@
         <div class="row">
             <div class="col-sm-4">
                 <div class="logo-ar-construcciones">
-                    <img src="./media/img/00-menu-principal/logo-ar-construcciones-negativo-b.png"
-                        alt="ar construcciones">
+                    <a href="https://www.arconstrucciones.com/" target="_blank">
+                        <img src="./media/img/00-menu-principal/logo-ar-construcciones-negativo-b.png"
+                            alt="ar construcciones">
+                    </a>
                 </div>
             </div>
             <div class="col-sm-4">
-
             </div>
             <div class="col-sm-4">
                 <input type="checkbox" id="burger-toggle" />
@@ -68,13 +69,16 @@
                                 </div>
                                 <div class="botones-menu">
                                     <a class="enlaceMenu" href="#hero" for="burger-toggle">
-                                        INICIO
+                                        <i class="fa-solid fa-water"></i> Inicio
                                     </a>
-                                    <a class="enlaceMenu" href="#planos" for="burger-toggle">
-                                        DETALLES
+                                    <a class="enlaceMenu" href="#detalles" for="burger-toggle">
+                                        <i class="fa-solid fa-building-circle-check"></i> Detalles
                                     </a>
                                     <a class="enlaceMenu" href="#playa-sol-y-arena" for="burger-toggle">
-                                        DONDE SE UNEN LA TIERRA Y EL MAR
+                                        <i class="fa-solid fa-umbrella-beach"></i> Donde se une la tierra y el mar
+                                    </a>
+                                    <a class="enlaceMenu" href="#ubicacion" for="burger-toggle">
+                                        <i class="fa-solid fa-location-dot"></i> Ubicación
                                     </a>
                                 </div>
                             </div>
@@ -141,7 +145,7 @@
         <img class="fondo" src="./media/img/01-hero/hero-paya-santua.jpg" alt="un paraiso">
         <div class="opacidad"></div>
     </section>
-    <section id="planos">
+    <section id="detalles">
         <div class="container">
             <div class="row d-flex justify-content-center align-items-center py-5">
                 <div class="col-sm-4">
@@ -220,28 +224,36 @@
     </section>
     <section id="ubicacion">
         <div class="container">
-            <div class="row">
-                <div class="col-sm-6">
-
-                </div>
-                <div class="col-sm-6">
-
+            <div class="row d-flex justify-content-center">
+                <div class="col-sm-10">
+                    <p class="mb-1">
+                        <i class="fas fa-map-marker-alt"></i> Carrera 74A con Calle 1, Santa Marta, Colombia
+                    </p>
+                    <iframe src="https://www.google.com/maps/d/embed?mid=1PNPFEpXmVUV4Y11p9V_QIoVB9ZZRXkg&ehbc=2E312F"
+                        width="100%" height="480"></iframe>
                 </div>
             </div>
         </div>
     </section>
-    <!-- <div class="row d-flex align-items-center">
-        <div class="col-sm-6">
-            <h3 class="titulo-seccion">
-                Te encantará nuestro patio trasero
-            </h3>
+    <footer>
+        <div class="container">
+            <div class="datos-contacto">
+                <div class="logo">
+                    <a href="https://www.arconstrucciones.com" target="_blank">
+                        <img src="./media/img/04-footer/logo-ar-construcciones-footer.webp"
+                            alt="logo ar construcciones">
+                    </a>
+                </div>
+                <div class="contacto">
+                    <p>
+                        <span>Recibe más información</span>
+                        <br>
+                        <strong><a href="tel:+573142070814">(+57) 314 207 0814</a></strong>
+                    </p>
+                </div>
+            </div>
         </div>
-        <div class="col-sm-6">
-            <p>
-                Con una ubicación privilegiada
-            </p>
-        </div>
-    </div> -->
+    </footer>
     <div class="contenedorFormulario">
         <div class="container">
             <div class="modal fade" id="registroUsuario" aria-hidden="true"
@@ -270,8 +282,10 @@
         </button>
     </div>
     <audio id="sonidoOceano" class="silenciar" loop>
-        <source src="/media/sonidos/sea.mp3" type="audio/ogg">
-        <source src="/media/sonidos/sea.mp3" type="audio/mpeg">
+        <source src="https://alexandergonzalezsaavedra.github.io/landing-playa-santua/media/sonidos/sea.mp3"
+            type="audio/ogg">
+        <source src="https://alexandergonzalezsaavedra.github.io/landing-playa-santua/media/sonidos/sea.mp3"
+            type="audio/mpeg">
         Your browser does not support the audio tag.
     </audio>
     <button id="silenciarMar" class="btn" onclick="solenciarMar()">

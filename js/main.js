@@ -1,5 +1,7 @@
-document.querySelector("#sonidoOceano").volume = 0.20;
+document.querySelector("#sonidoOceano").volume = 0.30;
 const estructura = document.querySelector("#activar-animacion-estructura")
+const menu = document.querySelector("#menu")
+const detalles = document.querySelector("#detalles")
 let pathsEstructura = document.querySelectorAll(".animacionEstructura")
 let pathEstructuraUno = estructura.querySelector("#estructuraUno")
 let audio = document.querySelector("#sonidoOceano");
@@ -9,12 +11,10 @@ const solenciarMar = () => {
     if (audio.classList.contains("silenciar")) {
         audio.classList.remove("silenciar");
         audio.play()
-        audio.volume = 0.20;
         iconoSonido.classList.remove("fa-volume-low");
         iconoSonido.classList.add("fa-volume-xmark");
     } else {
         audio.classList.add("silenciar");
-        audio.volume = 0.00;
         audio.pause()
         iconoSonido.classList.add("fa-volume-low");
         iconoSonido.classList.remove("fa-volume-xmark");
@@ -26,6 +26,14 @@ document.addEventListener("click", (e) => {
     }
 })
 window.addEventListener("scroll", () => {
+    const rectMenu = detalles.getBoundingClientRect().y
+    if (rectMenu <= 200) {
+        menu.classList.add("modoOscuro")
+        menu.classList.remove("modoClaro")
+    } else {
+        menu.classList.remove("modoOscuro")
+        menu.classList.add("modoClaro")
+    }
     const rect = estructura.getBoundingClientRect().y;
     if (rect < 450 || rect <= 0) {
         for (let i = 0; i < pathsEstructura.length; i++) {

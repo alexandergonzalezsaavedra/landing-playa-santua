@@ -184,11 +184,11 @@ audio {
   font-size: 20px;
 }
 #menu .overlay .botones-menu .enlaceMenu i {
-  color: var(--azul-agua-marina);
+  color: var(--verde-bg);
   width: 30px;
 }
 #menu .overlay .botones-menu .enlaceMenu:hover {
-  color: var(--arena);
+  color: var(--verde-limon);
 }
 #menu .overlay .opacidad {
   position: absolute;
@@ -400,10 +400,6 @@ audio {
 #detalles .container .diferencial small {
   font-family: var(--fuente-jakarta);
 }
-#detalles .container .diferencial small sup {
-  font-size: 12px;
-  top: -10px;
-}
 .ocultarEstructura {
   opacity: 0;
   transition: 0.5s;
@@ -466,7 +462,7 @@ audio {
 }
 #playa-sol-y-arena .tab-content .info-imagen p i {
   width: 20px;
-  color: #00e5ff;
+  color: #a2d9fe;
 }
 #playa-sol-y-arena .nav-pills .nav-link.active,
 #playa-sol-y-arena .nav-pills .show > .nav-link {

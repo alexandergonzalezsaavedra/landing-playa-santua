@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap");
 @font-face {
   font-family: Zodiak-Bold;
   src: url(../fuentes/Zodiak-Bold.otf) format("truetype");
@@ -6,6 +7,10 @@
 :root {
   --fuente-zodiak: Zodiak-Bold;
   --fuente-jakarta: "Plus Jakarta Sans", sans-serif;
+  --fuente-cursiva: "Merienda", cursive;
+  --azul-agua-marina: #8bc0c6;
+  --azul: #40798f;
+  --arena: #d8d3cd;
   --verde-oliva: #545a53;
   --verde-bg: #799795;
   --verde-limon: #c7dea9;
@@ -56,14 +61,14 @@ audio {
   width: auto;
   text-align: left;
   font-size: 40px;
-  font-family: var(--fuente-jakarta);
+  font-family: var(--fuente-zodiak);
 }
 .titulo-seccion::after {
   display: block;
   width: 100px;
   content: "";
   margin-top: 5px;
-  border-bottom: solid 2px var(--verde-limon);
+  border-bottom: solid 2px var(--azul-agua-marina);
 }
 .txt-verde-oliva {
   color: var(--verde-oliva);
@@ -93,6 +98,14 @@ audio {
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-width: 10px;
+}
+#map {
+  height: 500px;
+  width: 100%;
+  z-index: 0;
+}
+.leaflet-control-attribution leaflet-control {
+  display: none;
 }
 #menu {
   position: fixed;
@@ -341,7 +354,7 @@ audio {
 #hero .slogan .texto-slogan {
   position: absolute;
   bottom: 10%;
-  left: 50px;
+  left: 6%;
 }
 #hero .slogan .texto-slogan p {
   color: #fff;
@@ -381,8 +394,11 @@ audio {
   margin: 30px 0;
   padding-left: 30px;
   overflow-x: hidden;
-  border-left: solid 1px var(--verde-bg);
+  border-left: solid 2px var(--azul);
   color: var(--verde-oliva);
+}
+#detalles .container .diferencial small {
+  font-family: var(--fuente-jakarta);
 }
 .ocultarEstructura {
   opacity: 0;
@@ -446,7 +462,7 @@ audio {
 }
 #playa-sol-y-arena .tab-content .info-imagen p i {
   width: 20px;
-  color: var(--verde-limon);
+  color: #00e5ff;
 }
 #playa-sol-y-arena .nav-pills .nav-link.active,
 #playa-sol-y-arena .nav-pills .show > .nav-link {
@@ -473,12 +489,12 @@ audio {
   z-index: 10;
 }
 .contenedorFormulario .modal-content {
-  background: var(--verde-oscuro);
+  background: var(--blanco);
   padding: 5% 3%;
   text-align: center;
 }
 .btn-cerrar-modal {
-  color: var(--verde-bg);
+  color: var(--azul);
   font-size: 30px;
 }
 .contenedorFormulario .modal-content .modal-header {
@@ -488,7 +504,7 @@ audio {
 .contenedorFormulario .modal-content .modal-header h3 {
   margin: auto;
   font-family: var(--fuente-jakarta);
-  color: var(--verde-limon);
+  color: var(--azul);
 }
 .contenedorFormulario .modal-content .modal-body {
   border: none;
@@ -496,16 +512,16 @@ audio {
 }
 .contenedorFormulario .modal-content .modal-body {
   border: none;
-  color: var(--blanco);
+  color: #000000;
 }
 .contenedorFormulario .modal-content .modal-body form input,
 .contenedorFormulario .modal-content .modal-body form select {
-  color: var(--blanco);
-  background: rgba(0, 0, 0, 0.2);
+  color: #000000;
+  background: #f7f8fb;
   border: none;
 }
 .contenedorFormulario .modal-content .modal-body form input::placeholder {
-  color: var(--gris);
+  color: #8794b1;
 }
 .contenedorFormulario
   .modal-content
@@ -523,7 +539,7 @@ audio {
   width: 30px;
   height: 30px;
   border-radius: 5px;
-  accent-color: green;
+  accent-color: var(--azul);
 }
 .contenedorFormulario .modal-content .modal-body form a {
   display: block;
@@ -531,15 +547,15 @@ audio {
   text-align: left;
   text-decoration: none;
   transition: 0.5s;
-  color: var(--gris);
+  color: var(--azul);
 }
 .contenedorFormulario .modal-content .modal-body form a:hover {
   transition: 0.5s;
-  color: var(--verde-limon);
+  color: var(--azul-agua-marina);
 }
 .contenedorFormulario .modal-content .modal-body form .btn-enviar {
-  background-color: var(--verde-limon);
-  color: var(--verde-oscuro);
+  background-color: var(--azul);
+  color: var(--blanco);
   font-weight: 600;
 }
 .btn-registro {
@@ -550,17 +566,17 @@ audio {
 .btn-registro button {
   position: fixed;
   padding: 5px 40px;
-  border: solid 2px rgba(0, 0, 0, 0.5);
   width: auto;
   left: auto;
+  font-family: var(--fuente-jakarta);
   right: 40px;
   border-radius: 15px;
-  background: rgba(1, 67, 78, 1);
-  color: var(--verde-limon);
+  background: rgb(2 86 133);
+  color: var(--blanco);
   bottom: 3%;
   font-size: 20px;
   text-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
   z-index: 100;
   transition: ease-in-out;
   animation: pulso 5000ms infinite;
@@ -570,7 +586,7 @@ audio {
   font-size: 10px;
   top: 17px;
   margin-left: 5px;
-  color: var(--verde-limon);
+  color: #00e5ff;
   transition: 0.5s;
 }
 .btn-registro button:hover i {
@@ -579,11 +595,11 @@ audio {
 }
 .btn-registro button:hover {
   transition: 0.5s;
-  background: rgba(2, 114, 133, 1);
+  background: var(--azul);
   color: var(--blanco);
 }
 #ubicacion {
-  padding: 3% 0;
+  padding: 3% 0 0 0;
 }
 #ubicacion iframe {
   position: relative;
@@ -640,8 +656,27 @@ footer .datos-contacto .contacto p strong a {
 }
 footer .datos-contacto .contacto p strong a:hover {
   text-decoration: none;
-  color: var(--verde-oscuro);
+  color: var(--azul);
   transition: 0.5s;
+}
+.bg-figura-izquierda {
+  position: fixed;
+  width: 15%;
+  right: -5%;
+  top: 5%;
+  z-index: -1;
+}
+.bg-figura-derecha {
+  position: fixed;
+  width: 15%;
+  left: -5%;
+  bottom: 5%;
+  z-index: -1;
+}
+.bg-figura-izquierda img,
+.bg-figura-derecha img {
+  width: 100%;
+  height: auto;
 }
 @keyframes olas {
   0% {

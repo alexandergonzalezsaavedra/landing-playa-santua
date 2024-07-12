@@ -1,5 +1,36 @@
-@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap");
+@import url(https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap);
+body,
+html {
+  margin: 0;
+  width: 100%;
+  padding: 0;
+  height: auto;
+}
+#map,
+#menu,
+body,
+html {
+  width: 100%;
+}
+.estructura,
+.separadorTitulos .linea-1 {
+  stroke: #545a53;
+}
+body,
+html {
+  padding: 0;
+}
+#silenciarMar,
+audio {
+  width: 40px;
+  height: 40px;
+}
+#hero .slogan p:nth-child(3),
+footer .datos-contacto .contacto p span {
+  letter-spacing: 5px;
+  font-size: 20px;
+}
 @font-face {
   font-family: Zodiak-Bold;
   src: url(../fuentes/Zodiak-Bold.otf) format("truetype");
@@ -19,29 +50,18 @@
   --blanco: #ffffff;
 }
 html {
-  width: 100%;
-  height: auto;
-  margin: 0;
-  padding: 0;
   scroll-behavior: smooth;
 }
 body {
-  width: 100%;
-  height: auto;
-  margin: 0;
-  padding: 0;
   overflow-x: hidden;
-  background: url(../media/img/comun/bg.png) repeat;
+  background: url(../media/img/comun/bg.png);
   font-family: var(--fuente-jakarta);
 }
 audio {
   position: absolute;
   z-index: -10;
-  width: 40px;
-  height: 40px;
   top: 0;
 }
-/*comun*/
 .row {
   margin-left: 0;
   margin-right: 0;
@@ -70,6 +90,7 @@ audio {
   margin-top: 5px;
   border-bottom: solid 2px var(--azul-agua-marina);
 }
+#ubicacion p,
 .txt-verde-oliva {
   color: var(--verde-oliva);
 }
@@ -77,13 +98,11 @@ audio {
   color: var(--verde-oscuro);
 }
 .txt-blanco {
-  color: #ffffff;
+  color: #fff;
 }
-.separadorTitulos svg {
+.separadorTitulos svg,
+footer .datos-contacto .logo img {
   width: 100px;
-}
-.separadorTitulos .linea-1 {
-  stroke: #545a53;
 }
 .separadorTitulos .linea-2 {
   stroke: #799795;
@@ -101,7 +120,6 @@ audio {
 }
 #map {
   height: 500px;
-  width: 100%;
   z-index: 0;
 }
 .leaflet-control-attribution leaflet-control {
@@ -111,7 +129,6 @@ audio {
   position: fixed;
   display: block;
   top: 0;
-  width: 100%;
   z-index: 5;
 }
 #menu.modoClaro {
@@ -158,7 +175,7 @@ audio {
   padding-top: 80px;
   width: 100%;
   height: 100dvh;
-  background: #000000;
+  background: #000;
   opacity: 0;
   overflow: hidden;
   transition: 0.5s ease-in-out;
@@ -179,7 +196,7 @@ audio {
   display: block;
   padding: 10px 15px;
   margin-bottom: 20px;
-  color: #ffffff;
+  color: #fff;
   text-decoration: none;
   font-size: 20px;
 }
@@ -200,7 +217,7 @@ audio {
   overflow: hidden;
   background: linear-gradient(
     180deg,
-    rgba(23, 23, 23, 0.7) 0%,
+    rgba(23, 23, 23, 0.7) 0,
     rgba(23, 23, 23, 0.4) 50%,
     rgba(23, 23, 23, 0.7) 100%
   );
@@ -229,15 +246,15 @@ audio {
   opacity: 1;
   transition: 1s ease-in-out;
 }
-#menu #burger-toggle:checked ~ .burger-menu .line:nth-child(1) {
-  background: rgba(255, 255, 255, 1);
+#menu #burger-toggle:checked ~ .burger-menu .line:first-child {
+  background: #fff;
   transform: translateY(calc(var(--burger-menu-radius) / 5)) rotate(45deg);
 }
 #menu #burger-toggle:checked ~ .burger-menu .line:nth-child(2) {
   transform: scaleX(0);
 }
 #menu #burger-toggle:checked ~ .burger-menu .line:nth-child(3) {
-  background: rgba(255, 255, 255, 1);
+  background: #fff;
   transform: translateY(calc(var(--burger-menu-radius) / -5)) rotate(-45deg);
 }
 #menu .burger-menu {
@@ -248,10 +265,17 @@ audio {
   margin-right: 30px;
   width: var(--burger-menu-radius);
   height: var(--burger-menu-radius);
-  outline: none;
+  outline: 0;
   cursor: pointer;
   transition: 0.5s ease-in-out;
   z-index: 100;
+}
+#hero,
+#hero .opacidad,
+#hero img.fondo {
+  width: 100%;
+  height: 100dvh;
+  overflow: hidden;
 }
 #menu .burger-menu .line {
   position: absolute;
@@ -259,12 +283,12 @@ audio {
   right: 25%;
   width: 50%;
   height: 3px;
-  background: rgba(255, 255, 255, 1);
+  background: #fff;
   border-radius: 10px;
   overflow: hidden;
-  transition: all 0.5s ease;
+  transition: 0.5s;
 }
-#menu .burger-menu .line:nth-child(1) {
+#menu .burger-menu .line:first-child {
   top: 30%;
 }
 #menu .burger-menu .line:nth-child(2) {
@@ -272,6 +296,12 @@ audio {
 }
 #menu .burger-menu .line:nth-child(3) {
   top: 70%;
+}
+#hero .opacidad,
+#hero .slogan,
+#hero img.fondo {
+  top: 0;
+  position: absolute;
 }
 #menu .burger-menu .line::after {
   position: absolute;
@@ -281,9 +311,9 @@ audio {
   right: 0;
   width: 100%;
   height: 100%;
-  background: rgba(255, 255, 255, 1);
+  background: #fff;
   transform: translateX(-100%);
-  transition: all 0.25s ease;
+  transition: 0.25s;
 }
 #menu .burger-menu .line:nth-child(2)::after {
   transition-delay: 0.1s;
@@ -296,33 +326,20 @@ audio {
 }
 #hero {
   position: relative;
-  width: 100%;
-  height: 100dvh;
   z-index: 0;
-  overflow: hidden;
 }
 #hero img.fondo {
-  position: absolute;
   z-index: 0;
-  top: 0;
   left: 0;
   opacity: 1;
-  width: 100%;
-  height: 100dvh;
-  overflow: hidden;
   transition: ease-in-out;
-  animation: olas 15000ms infinite;
+  animation: 15s infinite olas;
 }
 #hero .opacidad {
-  top: 0;
   left: 0;
-  position: absolute;
-  width: 100%;
-  height: 100dvh;
-  overflow: hidden;
   background: linear-gradient(
     180deg,
-    rgba(23, 23, 23, 0.3) 0%,
+    rgba(23, 23, 23, 0.3) 0,
     rgba(23, 23, 23, 0.2) 70%,
     rgba(23, 23, 23, 0.8) 100%
   );
@@ -333,22 +350,19 @@ audio {
 #hero .nombre-proyecto svg {
   position: relative;
   width: 80%;
-  margin: auto;
-  margin-top: -5%;
+  margin: -5% auto auto;
   fill: #fff;
   filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7));
   z-index: 10;
 }
 #hero .nombre-proyecto .letra-logo {
   transition: ease-in;
-  animation: entrada 5000ms;
+  animation: 5s entrada;
   fill: #ffffff;
 }
 #hero .slogan {
-  position: absolute;
   width: 100%;
   height: 100%;
-  top: 0;
   z-index: 10;
 }
 #hero .slogan .texto-slogan {
@@ -361,9 +375,9 @@ audio {
   margin: 0;
   text-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
   transition: 1s;
-  animation: entrada 5000ms ease-in-out;
+  animation: 5s ease-in-out entrada;
 }
-#hero .slogan p:nth-child(1) {
+#hero .slogan p:first-child {
   font-size: 50px;
   font-family: var(--fuente-zodiak);
 }
@@ -374,16 +388,19 @@ audio {
   margin-left: 79px;
   font-family: var(--fuente-zodiak);
 }
+#detalles .container .diferencial small,
+.btn-registro button {
+  font-family: var(--fuente-jakarta);
+}
 #hero .slogan p:nth-child(3) {
-  font-size: 20px;
-  letter-spacing: 5px;
   font-style: italic;
 }
-#detalles {
+#detalles,
+footer {
   width: 100%;
   overflow: hidden;
   padding: 3% 0;
-  background: url(../media/img/comun/bg-descripcion-proyecto.png) repeat;
+  background: url(../media/img/comun/bg-descripcion-proyecto.png);
 }
 #detalles .container svg {
   width: 100%;
@@ -397,9 +414,6 @@ audio {
   border-left: solid 2px var(--azul);
   color: var(--verde-oliva);
 }
-#detalles .container .diferencial small {
-  font-family: var(--fuente-jakarta);
-}
 .ocultarEstructura {
   opacity: 0;
   transition: 0.5s;
@@ -409,15 +423,13 @@ audio {
   opacity: 1;
   transform-box: fill-box;
   transform-origin: center;
-  stroke: #545a53;
   stroke-width: 1;
   stroke-dasharray: 500;
   fill-opacity: 0;
   transition: 2s;
-  animation: estructura 8s ease-in-out forwards;
+  animation: 8s ease-in-out forwards estructura;
 }
 #playa-sol-y-arena {
-  /* background: #1a202c; */
   position: relative;
   padding: 5% 0;
 }
@@ -449,7 +461,7 @@ audio {
   text-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
 }
 #playa-sol-y-arena .tab-content .tab-pane {
-  background: #ffffff;
+  background: #fff;
   border-radius: 10px;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
 }
@@ -468,7 +480,7 @@ audio {
 #playa-sol-y-arena .nav-pills .show > .nav-link {
   padding: 3px;
   margin: 10px 0;
-  background-color: #ffffff;
+  background-color: #fff;
   transition: 0.3s;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
@@ -481,8 +493,6 @@ audio {
   bottom: 50%;
   left: auto;
   right: 30px;
-  width: 40px;
-  height: 40px;
   color: #fff;
   font-size: 25px;
   text-shadow: 3px 4px 7px rgba(0, 0, 0, 0.5);
@@ -509,14 +519,11 @@ audio {
 .contenedorFormulario .modal-content .modal-body {
   border: none;
   color: var(--verde-oliva);
-}
-.contenedorFormulario .modal-content .modal-body {
-  border: none;
-  color: #000000;
+  color: #000;
 }
 .contenedorFormulario .modal-content .modal-body form input,
 .contenedorFormulario .modal-content .modal-body form select {
-  color: #000000;
+  color: #000;
   background: #f7f8fb;
   border: none;
 }
@@ -568,7 +575,6 @@ audio {
   padding: 5px 40px;
   width: auto;
   left: auto;
-  font-family: var(--fuente-jakarta);
   right: 40px;
   border-radius: 15px;
   background: rgb(2 86 133);
@@ -579,7 +585,7 @@ audio {
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
   z-index: 100;
   transition: ease-in-out;
-  animation: pulso 5000ms infinite;
+  animation: 5s infinite pulso;
 }
 .btn-registro button i {
   position: absolute;
@@ -599,7 +605,7 @@ audio {
   color: var(--blanco);
 }
 #ubicacion {
-  padding: 3% 0 0 0;
+  padding: 3% 0 0;
 }
 #ubicacion iframe {
   position: relative;
@@ -607,18 +613,9 @@ audio {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
   z-index: 0;
 }
-#ubicacion p {
-  color: var(--verde-oliva);
-}
 #ubicacion i {
   width: 20px;
   color: var(--verde-bg);
-}
-footer {
-  width: 100%;
-  overflow: hidden;
-  padding: 3% 0;
-  background: url(../media/img/comun/bg-descripcion-proyecto.png) repeat;
 }
 footer .datos-contacto {
   display: flex;
@@ -629,9 +626,6 @@ footer .datos-contacto .logo {
   text-align: end;
   padding-right: 30px;
 }
-footer .datos-contacto .logo img {
-  width: 100px;
-}
 footer .datos-contacto .contacto {
   text-align: start;
   padding-left: 30px;
@@ -640,10 +634,6 @@ footer .datos-contacto .contacto {
 footer .datos-contacto .contacto p {
   margin: 0;
   padding: 10px 0;
-}
-footer .datos-contacto .contacto p span {
-  font-size: 20px;
-  letter-spacing: 5px;
 }
 footer .datos-contacto .contacto p strong {
   font-size: 27px;
@@ -673,22 +663,18 @@ footer .datos-contacto .contacto p strong a:hover {
   bottom: 5%;
   z-index: -1;
 }
-.bg-figura-izquierda img,
-.bg-figura-derecha img {
+.bg-figura-derecha img,
+.bg-figura-izquierda img {
   width: 100%;
   height: auto;
 }
 @keyframes olas {
-  0% {
-    transform: scale(1, 1) translate(0, 0);
-  }
-
-  50% {
-    transform: scale(1.1, 1.2) translate(0, -1%);
-  }
-
+  0%,
   100% {
     transform: scale(1, 1) translate(0, 0);
+  }
+  50% {
+    transform: scale(1.1, 1.2) translate(0, -1%);
   }
 }
 @keyframes estructura {
@@ -696,23 +682,15 @@ footer .datos-contacto .contacto p strong a:hover {
     stroke-dashoffset: 500;
     transition: ease-in-out;
   }
+  100%,
   60% {
-    stroke-dashoffset: 0;
-    fill-opacity: 0;
-    transition: ease-in-out;
-  }
-  100% {
     stroke-dashoffset: 0;
     fill-opacity: 0;
     transition: ease-in-out;
   }
 }
 @keyframes ocultarEstructura {
-  0% {
-    stroke-dashoffset: 0;
-    fill-opacity: 0;
-    transition: ease-in-out;
-  }
+  0%,
   50% {
     stroke-dashoffset: 0;
     fill-opacity: 0;
@@ -738,16 +716,12 @@ footer .datos-contacto .contacto p strong a:hover {
   }
 }
 @keyframes pulso {
-  0% {
-    transform: scale(1);
-  }
-
-  50% {
-    transform: scale(1.1);
-  }
-
+  0%,
   100% {
     transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
   }
 }
 @media (max-width: 550px) {
@@ -758,7 +732,8 @@ footer .datos-contacto .contacto p strong a:hover {
     margin-right: 0;
     margin-top: -10px;
   }
-  #menu .overlay .botones-menu .enlaceMenu {
+  #menu .overlay .botones-menu .enlaceMenu,
+  footer .datos-contacto .contacto p span {
     font-size: 15px;
   }
   #menu .overlay img {
@@ -781,9 +756,8 @@ footer .datos-contacto .contacto p strong a:hover {
   }
   #hero .slogan .texto-slogan p span {
     display: block;
-    /* width: 100%; */
   }
-  #hero .slogan p:nth-child(1) {
+  #hero .slogan p:first-child {
     font-size: 30px;
   }
   #hero .slogan p:nth-child(2) {
@@ -806,7 +780,7 @@ footer .datos-contacto .contacto p strong a:hover {
   #playa-sol-y-arena .nav-pills .show > .nav-link {
     padding: 3px;
     margin: 10px 0;
-    background-color: #ffffff;
+    background-color: #fff;
     transition: 0.3s;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
   }
@@ -849,9 +823,6 @@ footer .datos-contacto .contacto p strong a:hover {
     border-left: none;
     border-top: solid 1px var(--verde-oliva);
     margin-bottom: 70px;
-  }
-  footer .datos-contacto .contacto p span {
-    font-size: 15px;
   }
   footer .datos-contacto .contacto p strong {
     font-size: 18px;

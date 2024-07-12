@@ -10,6 +10,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <link rel="stylesheet" href="./css/main.css">
 </head>
 
@@ -203,7 +207,7 @@
     <section id="playa-sol-y-arena">
         <div class="container">
             <div class="row d-flex justify-content-center align-items-center mb-4">
-                <div class="col-sm-10">
+                <div class="col-sm-12">
                     <h3 class="titulo-seccion">
                         Vistas Playa Santúa
                     </h3>
@@ -213,67 +217,7 @@
         <div class="contenedor-galeria">
             <div class="container">
                 <div class="row d-flex justify-content-center align-items-center">
-                    <div class="col-sm-2">
-                        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link active" id="tab-vistas-playa-santua-norte" data-bs-toggle="pill"
-                                    data-bs-target="#tab-vista-norte-playa-santua" type="button" role="tab"
-                                    aria-controls="tab-vistas-playa-santua-norte" aria-selected="true">
-                                    <p class="d-block d-sm-none pt-3 m-0 text-center">
-                                        <i class="fa-solid fa-compass"></i> <b>Vista norte</b>
-                                    </p>
-                                    <div class="btn-imagen-full">
-                                        <img loading="lazy" class="w-100"
-                                            src="./media/img/02-tierra-y-mar/playa-santua-vista-norte.webp"
-                                            alt="Playa Santua - vista occidental">
-                                    </div>
-                                </button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="tab-vistas-playa-santua-occidente" data-bs-toggle="pill"
-                                    data-bs-target="#tab-vista-occidente-playa-santua" type="button" role="tab"
-                                    aria-controls="tab-vistas-playa-santua-occidente" aria-selected="false">
-                                    <p class="d-block d-sm-none pt-3 m-0 text-center">
-                                        <i class="fa-solid fa-compass"></i> <b>Vista occidente</b>
-                                    </p>
-                                    <div class="btn-imagen-full">
-                                        <img loading="lazy" class="w-100"
-                                            src="./media/img/02-tierra-y-mar/playa-santua-vista-occidental.webp"
-                                            alt="Playa Santua - vista norte">
-                                    </div>
-                                </button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="tab-vistas-playa-santua-oriente" data-bs-toggle="pill"
-                                    data-bs-target="#tab-vista-oriente-playa-santua" type="button" role="tab"
-                                    aria-controls="tab-vistas-playa-santua-oriente" aria-selected="false">
-                                    <p class="d-block d-sm-none pt-3 m-0 text-center">
-                                        <i class="fa-solid fa-compass"></i> <b>Vista oriente</b>
-                                    </p>
-                                    <div class="btn-imagen-full">
-                                        <img loading="lazy" class="w-100"
-                                            src="./media/img/02-tierra-y-mar/playa-santua-vista-oriente.webp"
-                                            alt="Playa Santua - vista oriente">
-                                    </div>
-                                </button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="tab-vistas-playa-santua-sur" data-bs-toggle="pill"
-                                    data-bs-target="#tab-vista-sur-playa-santua" type="button" role="tab"
-                                    aria-controls="tab-vistas-playa-santua-sur" aria-selected="false">
-                                    <p class="d-block d-sm-none pt-3 m-0 text-center">
-                                        <i class="fa-solid fa-compass"></i> <b>Vista sur</b>
-                                    </p>
-                                    <div class="btn-imagen-full">
-                                        <img loading="lazy" class="w-100"
-                                            src="./media/img/02-tierra-y-mar/playa-santua-vista-sur.webp"
-                                            alt="Playa Santua - vista sur">
-                                    </div>
-                                </button>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-10">
+                    <div class="col-sm-11">
                         <div class="tab-content d-none d-sm-block" id="pills-tabContent">
                             <div class="tab-pane position-relative fade show active" id="tab-vista-norte-playa-santua"
                                 role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
@@ -314,21 +258,128 @@
                         </div>
 
                     </div>
+                    <div class="col-sm-1 px-0">
+                        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="tab-vistas-playa-santua-norte" data-bs-toggle="pill"
+                                    data-bs-target="#tab-vista-norte-playa-santua" type="button" role="tab"
+                                    aria-controls="tab-vistas-playa-santua-norte" aria-selected="true">
+                                    <p class="d-block d-sm-none pt-3 m-0 text-center">
+                                        <i class="fa-solid fa-compass"></i> <b>Vista norte</b>
+                                    </p>
+                                    <div class="btn-imagen-full">
+                                        <img loading="lazy"
+                                            src="./media/img/02-tierra-y-mar/playa-santua-vista-norte.webp"
+                                            alt="Playa Santua - vista occidental">
+                                    </div>
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="tab-vistas-playa-santua-occidente" data-bs-toggle="pill"
+                                    data-bs-target="#tab-vista-occidente-playa-santua" type="button" role="tab"
+                                    aria-controls="tab-vistas-playa-santua-occidente" aria-selected="false">
+                                    <p class="d-block d-sm-none pt-3 m-0 text-center">
+                                        <i class="fa-solid fa-compass"></i> <b>Vista occidente</b>
+                                    </p>
+                                    <div class="btn-imagen-full">
+                                        <img loading="lazy"
+                                            src="./media/img/02-tierra-y-mar/playa-santua-vista-occidental.webp"
+                                            alt="Playa Santua - vista norte">
+                                    </div>
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="tab-vistas-playa-santua-oriente" data-bs-toggle="pill"
+                                    data-bs-target="#tab-vista-oriente-playa-santua" type="button" role="tab"
+                                    aria-controls="tab-vistas-playa-santua-oriente" aria-selected="false">
+                                    <p class="d-block d-sm-none pt-3 m-0 text-center">
+                                        <i class="fa-solid fa-compass"></i> <b>Vista oriente</b>
+                                    </p>
+                                    <div class="btn-imagen-full">
+                                        <img loading="lazy"
+                                            src="./media/img/02-tierra-y-mar/playa-santua-vista-oriente.webp"
+                                            alt="Playa Santua - vista oriente">
+                                    </div>
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="tab-vistas-playa-santua-sur" data-bs-toggle="pill"
+                                    data-bs-target="#tab-vista-sur-playa-santua" type="button" role="tab"
+                                    aria-controls="tab-vistas-playa-santua-sur" aria-selected="false">
+                                    <p class="d-block d-sm-none pt-3 m-0 text-center">
+                                        <i class="fa-solid fa-compass"></i> <b>Vista sur</b>
+                                    </p>
+                                    <div class="btn-imagen-full">
+                                        <img loading="lazy"
+                                            src="./media/img/02-tierra-y-mar/playa-santua-vista-sur.webp"
+                                            alt="Playa Santua - vista sur">
+                                    </div>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-
+                <!-- galeria imagenes en slide -->
+                <div id="carouselExample" class="carousel slide d-none">
+                    <div class="carousel-inner">
+                        <div class="carousel-item tab-content position-relative active">
+                            <img loading="lazy" class="w-100 rounded"
+                                src="./media/img/02-tierra-y-mar/playa-santua-vista-norte.webp"
+                                alt="Playa Santua - vista oriente">
+                            <div class="info-imagen">
+                                <p><i class="fa-solid fa-compass"></i> <b>Vista norte</b> Playa Santúa.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item tab-content position-relative">
+                            <img loading="lazy" class="w-100 rounded"
+                                src="./media/img/02-tierra-y-mar/playa-santua-vista-sur.webp"
+                                alt="Playa Santua - vista oriente">
+                            <div class="info-imagen">
+                                <p><i class="fa-solid fa-compass"></i> <b>Vista sur</b> Playa Santúa.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item tab-content position-relative">
+                            <img loading="lazy" class="w-100 rounded"
+                                src="./media/img/02-tierra-y-mar/playa-santua-vista-oriente.webp"
+                                alt="Playa Santua - vista oriente">
+                            <div class="info-imagen">
+                                <p><i class="fa-solid fa-compass"></i> <b>Vista oriental</b> Playa Santúa.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item tab-content position-relative">
+                            <img loading="lazy" class="w-100 rounded"
+                                src="./media/img/02-tierra-y-mar/playa-santua-vista-occidental.webp"
+                                alt="Playa Santua - vista oriente">
+                            <div class="info-imagen">
+                                <p><i class="fa-solid fa-compass"></i> <b>Vista occidental</b> Playa Santúa.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Siguiente</span>
+                    </button>
+                </div>
             </div>
         </div>
     </section>
     <section id="ubicacion">
         <div class="container">
             <div class="row d-flex justify-content-center align-items-center mb-4">
-                <div class="col-sm-10">
-                    <h3 class="titulo-seccion">
+                <div class="col-sm-12">
+                    <h3 class="titulo-seccion txt-verde-oliva">
                         Ubicación Playa Santúa
                     </h3>
                 </div>
             </div>
         </div>
+        <div id="map"></div>
         <div class="container">
             <div class="row d-flex justify-content-center">
                 <div class="col-sm-12">
@@ -368,16 +419,23 @@
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                         <div class="d-flex justify-content-center">
-                            <a type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></a>
+                            <a type="button" class="btn-cerrar-modal" data-bs-dismiss="modal" aria-label="Close">
+                                <i class="fa-regular fa-circle-xmark"></i>
+                            </a>
                         </div>
                         <div class="modal-header">
                             <h3 class="modal-title">¡Registrate ahora!</h3>
                         </div>
                         <div class="modal-body">
-                            <p>
-                                Llena el siguiente formulario y da el primer paso hacia el hogar de tus sueños. Nos
-                                pondremos en contacto cuanto antes.
-                            </p>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <p>
+                                        Llena el siguiente formulario y da el primer paso hacia el hogar de tus sueños.
+                                        <!-- Nos
+                                        pondremos en contacto cuanto antes. -->
+                                    </p>
+                                </div>
+                            </div>
                             <form id="formulario" class="p-4 rounded-3 form-bg">
                                 <div class="row">
                                     <div class="col-12 mb-3">
@@ -401,7 +459,7 @@
                                         <input type="tel" class="form-control" id="telefono" placeholder="*Teléfono" />
                                         <div id="telefono-error" class="error-message"></div>
                                     </div>
-                                    <div class="col-12 mb-3">
+                                    <!-- <div class="col-12 mb-3">
                                         <select class="form-select" id="valor-compra">
                                             <option selected value="">*Me interesa un Apartamento entre</option>
                                             <option value="Entre 400 y 700 millones COP">Entre 400 y 700 millones COP
@@ -426,18 +484,22 @@
                                             <option value="EN MAS DE 6 MESES">En más de 6 meses</option>
                                         </select>
                                         <div id="tiempo-compra-error" class="error-message"></div>
-                                    </div>
-                                    <div class="checkbox mb-3">
-                                        <label>
+                                    </div> -->
+                                    <div class="row d-flex justify-content-between mb-5">
+                                        <div class="col-1 col-sm-1 px-0">
                                             <input type="checkbox" value="accept" required id="terminos-condiciones" />
+                                        </div>
+                                        <div class="col-11 col-sm-11">
                                             <a href="https://storeproyectoar.blob.core.windows.net/ar-multimedia-resources-container/CLAUSULA-DE-CONSENTIMIENTO.pdf"
                                                 target="_blank">He leído y acepto la cláusula de consentimiento web.</a>
+                                        </div>
+                                        <div class="col-sm-12">
                                             <div id="checkbox-error" class="error-message"></div>
-                                        </label>
+                                        </div>
                                     </div>
                                     <div id="button-error" class="error-message"></div>
                                     <div id="button-notify" class="notification-message"></div>
-                                    <button class="btn btn-lg btn-danger" type="submit">
+                                    <button class="btn btn-enviar" type="submit">
                                         Enviar
                                     </button>
                                 </div>
@@ -450,7 +512,7 @@
     </div>
     <div class="row btn-registro">
         <button class="btn" data-bs-target="#registroUsuario" data-bs-toggle="modal">
-            Regístrate
+            Regístrate <i class="fa-solid fa-chevron-right"></i>
         </button>
     </div>
     <audio id="sonidoOceano" class="silenciar" loop>
@@ -466,6 +528,7 @@
     <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./js/main.js"></script>
+    <script src="./js/map.js"></script>
 </body>
 
 </html>

@@ -11,6 +11,7 @@
   --verde-limon: #c7dea9;
   --verde-oscuro: #092d32;
   --gris: #dedfdf;
+  --blanco: #ffffff;
 }
 html {
   width: 100%;
@@ -51,10 +52,47 @@ audio {
   transition: 0.5s;
 }
 .titulo-seccion {
-  text-align: center;
+  display: block;
+  width: auto;
+  text-align: left;
   font-size: 40px;
+  font-family: var(--fuente-jakarta);
+}
+.titulo-seccion::after {
+  display: block;
+  width: 100px;
+  content: "";
+  margin-top: 5px;
+  border-bottom: solid 2px var(--verde-limon);
+}
+.txt-verde-oliva {
   color: var(--verde-oliva);
-  font-family: var(--fuente-zodiak);
+}
+.txt-verde-oscuro {
+  color: var(--verde-oscuro);
+}
+.txt-blanco {
+  color: #ffffff;
+}
+.separadorTitulos svg {
+  width: 100px;
+}
+.separadorTitulos .linea-1 {
+  stroke: #545a53;
+}
+.separadorTitulos .linea-2 {
+  stroke: #799795;
+}
+.separadorTitulos .linea-3 {
+  stroke: #c7dea9;
+}
+.separadorTitulos .linea-1,
+.separadorTitulos .linea-2,
+.separadorTitulos .linea-3 {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 10px;
 }
 #menu {
   position: fixed;
@@ -260,7 +298,7 @@ audio {
   height: 100dvh;
   overflow: hidden;
   transition: ease-in-out;
-  animation: olas 20000ms infinite;
+  animation: olas 15000ms infinite;
 }
 #hero .opacidad {
   top: 0;
@@ -363,13 +401,18 @@ audio {
   animation: estructura 8s ease-in-out forwards;
 }
 #playa-sol-y-arena {
-  padding: 5% 0 3% 0;
+  /* background: #1a202c; */
+  position: relative;
+  padding: 5% 0;
 }
 #playa-sol-y-arena .contenedor-galeria .btn-imagen-full {
   width: 100%;
   transition: 0.5s;
 }
 #playa-sol-y-arena .contenedor-galeria .btn-imagen-full img {
+  width: 100%;
+  height: auto;
+  margin: auto;
   border-radius: 5px;
   transition: 0.3s;
 }
@@ -430,9 +473,13 @@ audio {
   z-index: 10;
 }
 .contenedorFormulario .modal-content {
-  padding: 5% 0;
+  background: var(--verde-oscuro);
+  padding: 5% 3%;
   text-align: center;
-  background-color: var(--verde-oscuro);
+}
+.btn-cerrar-modal {
+  color: var(--verde-bg);
+  font-size: 30px;
 }
 .contenedorFormulario .modal-content .modal-header {
   border: none;
@@ -440,12 +487,60 @@ audio {
 }
 .contenedorFormulario .modal-content .modal-header h3 {
   margin: auto;
-  font-family: var(--fuente-zodiak);
+  font-family: var(--fuente-jakarta);
   color: var(--verde-limon);
 }
 .contenedorFormulario .modal-content .modal-body {
   border: none;
-  color: #ffffff;
+  color: var(--verde-oliva);
+}
+.contenedorFormulario .modal-content .modal-body {
+  border: none;
+  color: var(--blanco);
+}
+.contenedorFormulario .modal-content .modal-body form input,
+.contenedorFormulario .modal-content .modal-body form select {
+  color: var(--blanco);
+  background: rgba(0, 0, 0, 0.2);
+  border: none;
+}
+.contenedorFormulario .modal-content .modal-body form input::placeholder {
+  color: var(--gris);
+}
+.contenedorFormulario
+  .modal-content
+  .modal-body
+  form
+  select
+  option:not(first-child) {
+  background-color: var(--verde-oscuro);
+  color: var(--blanco);
+}
+.contenedorFormulario .modal-content .modal-body form select {
+  color: var(--blanco);
+}
+.contenedorFormulario .modal-content .modal-body form input[type="checkbox"] {
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  accent-color: green;
+}
+.contenedorFormulario .modal-content .modal-body form a {
+  display: block;
+  width: 100%;
+  text-align: left;
+  text-decoration: none;
+  transition: 0.5s;
+  color: var(--gris);
+}
+.contenedorFormulario .modal-content .modal-body form a:hover {
+  transition: 0.5s;
+  color: var(--verde-limon);
+}
+.contenedorFormulario .modal-content .modal-body form .btn-enviar {
+  background-color: var(--verde-limon);
+  color: var(--verde-oscuro);
+  font-weight: 600;
 }
 .btn-registro {
   display: flex;
@@ -454,20 +549,38 @@ audio {
 }
 .btn-registro button {
   position: fixed;
-  padding: 5px 15px;
+  padding: 5px 40px;
+  border: solid 2px rgba(0, 0, 0, 0.5);
   width: auto;
   left: auto;
   right: 40px;
-  background: rgba(121, 151, 149, 1);
-  color: #ffffff;
+  border-radius: 15px;
+  background: rgba(1, 67, 78, 1);
+  color: var(--verde-limon);
   bottom: 3%;
   font-size: 20px;
   text-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
   z-index: 100;
+  transition: ease-in-out;
+  animation: pulso 5000ms infinite;
+}
+.btn-registro button i {
+  position: absolute;
+  font-size: 10px;
+  top: 17px;
+  margin-left: 5px;
+  color: var(--verde-limon);
+  transition: 0.5s;
+}
+.btn-registro button:hover i {
+  transition: 0.5s;
+  margin-left: 15px;
 }
 .btn-registro button:hover {
-  background: rgba(121, 151, 149, 0.5);
-  color: var(--verde-limon);
+  transition: 0.5s;
+  background: rgba(2, 114, 133, 1);
+  color: var(--blanco);
 }
 #ubicacion {
   padding: 3% 0;
@@ -589,6 +702,19 @@ footer .datos-contacto .contacto p strong a:hover {
     opacity: 1;
   }
 }
+@keyframes pulso {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
 @media (max-width: 550px) {
   .titulo-seccion {
     font-size: 20px;
@@ -673,6 +799,7 @@ footer .datos-contacto .contacto p strong a:hover {
     margin: auto;
     right: auto;
     left: auto;
+    animation: none;
   }
   footer .datos-contacto {
     flex-direction: column;

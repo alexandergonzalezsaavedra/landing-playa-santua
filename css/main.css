@@ -184,11 +184,11 @@ audio {
   font-size: 20px;
 }
 #menu .overlay .botones-menu .enlaceMenu i {
-  color: var(--verde-bg);
+  color: var(--azul-agua-marina);
   width: 30px;
 }
 #menu .overlay .botones-menu .enlaceMenu:hover {
-  color: var(--verde-limon);
+  color: var(--arena);
 }
 #menu .overlay .opacidad {
   position: absolute;
@@ -399,6 +399,10 @@ audio {
 }
 #detalles .container .diferencial small {
   font-family: var(--fuente-jakarta);
+}
+#detalles .container .diferencial small sup {
+  font-size: 12px;
+  top: -10px;
 }
 .ocultarEstructura {
   opacity: 0;

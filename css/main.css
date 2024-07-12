@@ -201,11 +201,11 @@ footer .datos-contacto .logo img {
   font-size: 20px;
 }
 #menu .overlay .botones-menu .enlaceMenu i {
-  color: var(--verde-bg);
+  color: var(--azul-agua-marina);
   width: 30px;
 }
 #menu .overlay .botones-menu .enlaceMenu:hover {
-  color: var(--verde-limon);
+  color: var(--azul-agua-marina);
 }
 #menu .overlay .opacidad {
   position: absolute;

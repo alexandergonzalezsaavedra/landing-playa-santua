@@ -504,13 +504,12 @@ footer {
 
 .estructura {
   opacity: 1;
-  transform-box: fill-box;
+  transform-box: stroke-box;
   transform-origin: center;
-  stroke-width: 1;
-  stroke-dasharray: 500;
-  fill-opacity: 0;
-  transition: 2s;
-  animation: 8s ease-in-out forwards estructura;
+  stroke-width: 0.8;
+  stroke-dasharray: 1570;
+  fill-opacity: 1;
+  animation: 5s ease-in-out forwards estructura;
 }
 
 #playa-sol-y-arena {
@@ -816,16 +815,24 @@ footer .datos-contacto .contacto p strong a:hover {
 
 @keyframes estructura {
   0% {
-    stroke-dashoffset: 500;
-    fill: #545a53;
-    transition: ease-in-out;
+    fill: #ccd1d0;
+    stroke: #ccd1d0;
+    stroke-dashoffset: 1570;
+    fill-opacity: 0;
   }
 
-  100%,
   60% {
+    fill: #929292;
+    stroke: #929292;
+    stroke-dashoffset: 750;
+    fill-opacity: 0.5;
+  }
+
+  100% {
+    fill: #545a53;
+    stroke: #545a53;
     stroke-dashoffset: 0;
-    fill-opacity: 0;
-    transition: ease-in-out;
+    fill-opacity: 1;
   }
 }
 
@@ -838,7 +845,7 @@ footer .datos-contacto .contacto p strong a:hover {
   }
 
   100% {
-    stroke-dashoffset: 500;
+    stroke-dashoffset: 1550;
     fill: #545a53;
     transition: ease-in-out;
   }

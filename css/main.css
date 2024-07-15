@@ -453,13 +453,18 @@ footer .datos-contacto .logo img {
 #hero .slogan p:nth-child(3) {
   font-style: italic;
 }
+#hero .nombre-proyecto .msjAgradecimiento .btn-regresar {
+  background-color: var(--azul);
+  color: var(--blanco);
+  font-weight: 600;
+}
 #hero .msjAgradecimiento {
   position: relative;
   width: 100%;
   padding: 18px;
   margin-top: 40px;
   text-align: center;
-  z-index: 10;
+  z-index: 100;
 }
 #hero .msjAgradecimiento h3 {
   color: var(--blanco);

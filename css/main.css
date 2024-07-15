@@ -817,6 +817,7 @@ footer .datos-contacto .contacto p strong a:hover {
 @keyframes estructura {
   0% {
     stroke-dashoffset: 500;
+    fill: #545a53;
     transition: ease-in-out;
   }
 
@@ -838,6 +839,7 @@ footer .datos-contacto .contacto p strong a:hover {
 
   100% {
     stroke-dashoffset: 500;
+    fill: #545a53;
     transition: ease-in-out;
   }
 }

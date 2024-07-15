@@ -815,19 +815,11 @@ footer .datos-contacto .contacto p strong a:hover {
 
 @keyframes estructura {
   0% {
-    fill: #ccd1d0;
-    stroke: #ccd1d0;
+    fill: #c8cdcc;
+    stroke: #c8cdcc;
     stroke-dashoffset: 1570;
     fill-opacity: 0;
   }
-
-  60% {
-    fill: #929292;
-    stroke: #929292;
-    stroke-dashoffset: 750;
-    fill-opacity: 0.5;
-  }
-
   100% {
     fill: #545a53;
     stroke: #545a53;

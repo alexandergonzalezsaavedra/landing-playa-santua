@@ -287,21 +287,22 @@
             <div class="modal fade" id=registroUsuario aria-hidden=true aria-labelledby=registroUsuarioModalFullscreen
                 tabindex=-1>
                 <div class="modal-dialog modal-dialog-centered">
-                    <div class=modal-content>
+                    <div class="modal-content pt-4">
                         <div class="d-flex justify-content-center"><a type=button class=btn-cerrar-modal
                                 data-bs-dismiss=modal aria-label=Close><i class="fa-regular fa-circle-xmark"></i></a>
                         </div>
-                        <div class=modal-header>
-                            <h3 class=modal-title>¡Regístrate ahora!</h3>
-                        </div>
                         <div class=modal-body>
-                            <div class=row>
-                                <div class=col-sm-12>
-                                    <p>Llena el siguiente formulario y da el primer paso hacia el hogar de tus sueños.
-                                    </p>
+                            <form id=formularioRegistro class="px-4 pb-4 rounded-3 form-bg">
+                                <div class="modal-header">
+                                    <h3 class=modal-title>¡Regístrate ahora!</h3>
                                 </div>
-                            </div>
-                            <form id=formulario class="p-4 rounded-3 form-bg">
+                                <div class=row>
+                                    <div class=col-sm-12>
+                                        <p>Llena el siguiente formulario y da el primer paso hacia el hogar de tus
+                                            sueños.
+                                        </p>
+                                    </div>
+                                </div>
                                 <div class=row>
                                     <div class="col-12 mb-3"><input class=form-control id=nombre placeholder=*Nombre>
                                         <div id=nombre-error class=error-message></div>
@@ -322,8 +323,9 @@
                                         <div id=telefono-error class=error-message></div>
                                     </div>
                                     <div class="row d-flex justify-content-between mb-5">
-                                        <div class="col-1 col-sm-1 px-0"><input type=checkbox value=accept required
-                                                id=terminos-condiciones></div>
+                                        <div class="col-1 col-sm-1 px-0">
+                                            <input type=checkbox value=accept required id=terminos-condiciones>
+                                        </div>
                                         <div class="col-11 col-sm-11"><a
                                                 href=https://storeproyectoar.blob.core.windows.net/ar-multimedia-resources-container/CLAUSULA-DE-CONSENTIMIENTO.pdf
                                                 target=_blank>He leído y acepto la cláusula de consentimiento web.</a>
@@ -337,6 +339,24 @@
                                         class="btn btn-enviar" type=submit>Enviar</button>
                                 </div>
                             </form>
+                            <div id="mensajePreenvio" class="enviarInformacion d-none">
+                                <div class="olas">
+                                    <img src="./media/img/05-formulario/olas-y-sol-envio.gif"
+                                        alt="Enviando información Playa Santúa">
+                                </div>
+                                <p>
+                                    Enviando informción
+                                </p>
+                                <div class="spinner-grow text-primary" role="status">
+                                    <span class="visually-hidden">Loading...</span>
+                                </div>
+                                <div class="spinner-grow text-primary" role="status">
+                                    <span class="visually-hidden">Loading...</span>
+                                </div>
+                                <div class="spinner-grow text-primary" role="status">
+                                    <span class="visually-hidden">Loading...</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

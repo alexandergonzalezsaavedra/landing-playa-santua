@@ -487,12 +487,12 @@ footer {
   background: url(../media/img/comun/bg-descripcion-proyecto.png);
 }
 
-#detalles .container svg {
+#detalles svg {
   width: 100%;
   margin: auto;
 }
 
-#detalles .container .diferencial {
+#detalles .diferencial {
   width: 100%;
   margin: 30px 0;
   padding-left: 30px;
@@ -500,7 +500,45 @@ footer {
   border-left: solid 2px var(--azul);
   color: var(--verde-oliva);
 }
-
+#detalles .img-mapa-zoom {
+  width: 100%;
+  height: auto;
+  cursor: zoom-in;
+  position: relative;
+}
+#detalles .icon-zoom {
+  position: absolute;
+  font-size: 25px;
+  color: #40798f;
+  bottom: 20px;
+  left: 20px;
+  transition: ease-in-out;
+  animation: 3s infinite pulso;
+}
+#detalles #mapa-playa-santua-zoom .modal-content {
+  background: transparent;
+  border: none;
+}
+#detalles #mapa-playa-santua-zoom .modal-content .modal-header h3 {
+  text-align: center;
+  color: #d8d3cd;
+}
+#detalles #mapa-playa-santua-zoom .modal-content .modal-header .btn-cerrar {
+  background: none;
+  color: #d8d3cd;
+  margin: auto;
+  font-size: 3em;
+}
+#detalles #mapa-playa-santua-zoom .modal-content .modal-body {
+  padding: 0;
+}
+#detalles #mapa-playa-santua-zoom .modal-content .modal-body img {
+  width: 100%;
+  height: auto;
+}
+#detalles #mapa-playa-santua-zoom .modal-content .modal-footer {
+  background: transparent;
+}
 .ocultarEstructura {
   opacity: 0;
   transition: 0.5s;
@@ -729,18 +767,53 @@ footer {
   background: var(--azul);
   color: var(--blanco);
 }
-
 #ubicacion {
   padding: 3% 0 0;
 }
-
-#ubicacion iframe {
+#ubicacion .img-360-santua {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
+}
+#ubicacion .img-360-santua:hover {
+  transition: 0.3s;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3);
+  transform: scale(0.95);
+}
+#ubicacion #playa-santua-360 .modal-header {
+  display: flex;
+  justify-content: space-between;
+}
+#ubicacion #playa-santua-360 .modal-header h3 {
+  margin: 0;
+  color: var(--verde-oliva);
+}
+#ubicacion #playa-santua-360 .modal-header .btn-cerrar {
+  margin-right: 0;
+  font-size: 30px;
+}
+#ubicacion #playa-santua-360 .modal-body {
+  padding: 0;
+  overflow: hidden;
+}
+#ubicacion #playa-santua-360 .modal-body iframe {
   position: relative;
-  border-radius: 10px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 100%;
   z-index: 0;
 }
-
+#ubicacion #playa-santua-360 .modal-footer p {
+  text-align: center;
+  padding-left: 0;
+  border-left: none;
+}
+#ubicacion #playa-santua-360 .modal-footer p a {
+  text-decoration: none;
+  color: var(--verde-oliva);
+  transition: 0.5s;
+}
 #ubicacion i {
   width: 20px;
   color: var(--verde-bg);

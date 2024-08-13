@@ -14,7 +14,11 @@ body,
 html {
   width: 100%;
 }
-
+.txt-index {
+  margin: 0;
+  font-size: 0;
+  text-decoration: none;
+}
 .estructura,
 .separadorTitulos .linea-1 {
   stroke: #545a53;

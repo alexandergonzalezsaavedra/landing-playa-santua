@@ -32,11 +32,13 @@ const playVid = () => {
 }
 setTimeout(() => {
     playVid()
-}, 300)
+}, 6000)
 
 window.addEventListener('load', e => {
     e.preventDefault()
-    window.location.hash = '#video-playa-santua';
+    // setInterval(function () {
+    //     window.location.hash = '#video-playa-santua';
+    // }, 5000);
 })
 
 silenciarVideo.addEventListener('click', e => {

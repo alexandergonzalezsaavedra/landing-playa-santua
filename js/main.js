@@ -1,3 +1,7 @@
+window.addEventListener('load', e => {
+    e.preventDefault()
+})
+
 document.querySelector('#sonidoOceano').volume = 0.35;
 const estructura = document.querySelector('#activar-animacion-estructura'),
     menu = document.querySelector('#menu'),
@@ -18,6 +22,42 @@ const solenciarMar = () => {
             iconoSonido.classList.add('fa-volume-xmark'),
             iconoSonido.classList.remove('fa-volume-low'));
 };
+
+
+const videoSantua = document.getElementById("embed-video");
+const silenciarVideo = document.querySelector("#silenciarVideo")
+const iconoSonidoVideo = document.querySelector('#silenciarVideo i')
+const playVid = () => {
+    videoSantua.play();
+}
+setTimeout(() => {
+    playVid()
+}, 300)
+
+window.addEventListener('load', e => {
+    e.preventDefault()
+    window.location.hash = '#video-playa-santua';
+})
+
+silenciarVideo.addEventListener('click', e => {
+    e.preventDefault()
+    videoSantua.muted = !videoSantua.muted;
+    if (iconoSonidoVideo.classList.contains('fa-volume-xmark')) {
+        iconoSonidoVideo.classList.remove('fa-volume-xmark')
+        iconoSonidoVideo.classList.add('fa-volume-low')
+        iconoSonidoVideo.classList.remove('pulso')
+    } else {
+        iconoSonidoVideo.classList.remove('fa-volume-low')
+        iconoSonidoVideo.classList.add('fa-volume-xmark')
+        iconoSonidoVideo.classList.add('pulso')
+    }
+}
+)
+
+
+
+
+
 document.addEventListener('click', (e) => {
     e.target.matches('.enlaceMenu') && (burgerToggle.checked = !1);
 }),

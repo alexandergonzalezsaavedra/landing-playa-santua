@@ -24,7 +24,7 @@ html {
   stroke: #545a53;
 }
 
-#silenciarMar,
+#silenciarVideo,
 audio {
   width: 40px;
   height: 40px;
@@ -624,9 +624,9 @@ footer {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
 
-#silenciarMar {
+#silenciarVideo {
   display: block;
-  position: fixed;
+  position: absolute;
   padding: 0;
   top: auto;
   bottom: 50%;
@@ -637,7 +637,10 @@ footer {
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
   z-index: 10;
 }
-
+.pulso {
+  transition: ease-in-out;
+  animation: 2s infinite pulsoBoton;
+}
 .contenedorFormulario .modal-content {
   background: var(--blanco);
   padding: 5% 3%;
@@ -952,6 +955,16 @@ footer .datos-contacto .contacto p strong a:hover {
     transform: scale(1.1);
   }
 }
+@keyframes pulsoBoton {
+  0%,
+  100% {
+    transform: scale(1.3);
+  }
+
+  50% {
+    transform: scale(1.5);
+  }
+}
 
 @media (max-width: 550px) {
   .titulo-seccion {
@@ -1036,7 +1049,7 @@ footer .datos-contacto .contacto p strong a:hover {
     color: #a2d9fe;
   }
 
-  #silenciarMar {
+  #silenciarVideo {
     bottom: 35%;
     right: 20px;
   }

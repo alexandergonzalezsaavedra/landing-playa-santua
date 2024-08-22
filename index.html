@@ -39,12 +39,7 @@
     <script src=https://unpkg.com/leaflet@1.9.4/dist/leaflet.js
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <link rel=stylesheet href=./css/main.css>
-    <script>
-        window.addEventListener('load', e => {
-            e.preventDefault()
-            window.location.hash = '#video-playa-santua';
-        })
-    </script>
+
 </head>
 
 <body>
@@ -172,14 +167,16 @@
     <section id="video-playa-santua" style="position: relative;z-index: 3;"">
         <div class=" flex justify-content-center p-0">
         <div class="col-12 p-0 text-center">
-            <video controls width="100%" autoplay>
+            <video id="embed-video" controls width="100%" muted>
                 <source src="./media/video/playa_santua.mp4" type="video/mp4">
-                <source src="./media/video/playa_santua.mp4" type="video/ogg">
                 <p>Sorry, Your Browser Doesn't Support Embedded Videos. Here's the <a
                         href="https://www.youtube.com/watch?v=yDzQDeaW6O8">Link to the video</a></p>
             </video>
         </div>
         </div>
+        <button class="btn" id="silenciarVideo">
+            <i class="fa-solid fa-volume-xmark"></i>
+        </button>
     </section>
     <section id=detalles>
         <div class="row d-flex justify-content-center align-items-center py-5">
@@ -466,7 +463,8 @@
         <source src=https://playasantua.com/media/sonidos/sea.mp3 type=audio/ogg>
         <source src=https://playasantua.com/media/sonidos/sea.mp3 type=audio/mpeg>Su navegador no soporta la etiqueta de
         audio.
-    </audio><button id=silenciarMar class=btn onclick=solenciarMar()><i class="fa-solid fa-volume-xmark"></i></button>
+    </audio>
+    <!-- <button id=silenciarMar class=btn onclick=solenciarMar()><i class="fa-solid fa-volume-xmark"></i></button> -->
     <div class=bg-figura-izquierda><img src=./media/img/comun/sol-bg.png alt="bg figura sol"></div>
     <div class=bg-figura-derecha><img src=./media/img/comun/sol-bg.png alt="bg figura sol"></div>
     <script src=https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js></script>

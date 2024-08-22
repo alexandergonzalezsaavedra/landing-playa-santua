@@ -483,6 +483,27 @@ footer .datos-contacto .logo img {
   font-weight: bold;
 }
 
+#embed-video {
+  width: 70%;
+  margin: 5% auto;
+}
+#silenciarVideo {
+  display: block;
+  position: absolute;
+  padding: 0;
+  top: auto;
+  bottom: 50%;
+  left: auto;
+  right: 18%;
+  color: #fff;
+  font-size: 25px;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+  z-index: 10;
+}
+
+#detalles {
+  margin-top: -10px;
+}
 #detalles,
 footer {
   width: 100%;
@@ -624,19 +645,6 @@ footer {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
 
-#silenciarVideo {
-  display: block;
-  position: absolute;
-  padding: 0;
-  top: auto;
-  bottom: 50%;
-  left: auto;
-  right: 30px;
-  color: #fff;
-  font-size: 25px;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
-  z-index: 10;
-}
 .pulso {
   transition: ease-in-out;
   animation: 2s infinite pulsoBoton;
@@ -967,6 +975,10 @@ footer .datos-contacto .contacto p strong a:hover {
 }
 
 @media (max-width: 550px) {
+  #embed-video {
+    width: 100%;
+    margin: 0 auto;
+  }
   .titulo-seccion {
     font-size: 20px;
   }

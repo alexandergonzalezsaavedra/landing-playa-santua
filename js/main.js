@@ -23,7 +23,7 @@ const solenciarMar = () => {
             iconoSonido.classList.remove('fa-volume-low'));
 };
 
-
+const seccionVideo = document.querySelector("#video-playa-santua")
 const videoSantua = document.getElementById("embed-video");
 const silenciarVideo = document.querySelector("#silenciarVideo")
 const iconoSonidoVideo = document.querySelector('#silenciarVideo i')
@@ -62,7 +62,7 @@ document.addEventListener('click', (e) => {
     e.target.matches('.enlaceMenu') && (burgerToggle.checked = !1);
 }),
     window.addEventListener('scroll', () => {
-        detalles.getBoundingClientRect().y <= 200
+        seccionVideo.getBoundingClientRect().y <= 200
             ? (menu.classList.add('modoOscuro'), menu.classList.remove('modoClaro'))
             : (menu.classList.remove('modoOscuro'), menu.classList.add('modoClaro'));
         const e = estructura.getBoundingClientRect().y;

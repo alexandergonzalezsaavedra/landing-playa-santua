@@ -30,6 +30,10 @@ const iconoSonidoVideo = document.querySelector('#silenciarVideo i')
 const playVid = () => {
     videoSantua.play();
 }
+const playVidAud = () => {
+    videoSantua.play();
+    videoSantua.muted = false;
+}
 setTimeout(() => {
     playVid()
 }, 6000)

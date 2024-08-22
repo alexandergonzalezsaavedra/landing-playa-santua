@@ -39,6 +39,12 @@
     <script src=https://unpkg.com/leaflet@1.9.4/dist/leaflet.js
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <link rel=stylesheet href=./css/main.css>
+    <script>
+        window.addEventListener('load', e => {
+            e.preventDefault()
+            window.location.hash = '#video-playa-santua';
+        })
+    </script>
 </head>
 
 <body>
@@ -163,6 +169,18 @@
         </div><img class=fondo src=./media/img/01-hero/hero-paya-santua.jpg alt="un paraiso">
         <div class=opacidad></div>
     </section>
+    <section id="video-playa-santua" style="position: relative;z-index: 3;"">
+        <div class=" flex justify-content-center p-0">
+        <div class="col-12 p-0 text-center">
+            <video controls width="100%" autoplay>
+                <source src="./media/video/playa_santua.mp4" type="video/mp4">
+                <source src="./media/video/playa_santua.mp4" type="video/ogg">
+                <p>Sorry, Your Browser Doesn't Support Embedded Videos. Here's the <a
+                        href="https://www.youtube.com/watch?v=yDzQDeaW6O8">Link to the video</a></p>
+            </video>
+        </div>
+        </div>
+    </section>
     <section id=detalles>
         <div class="row d-flex justify-content-center align-items-center py-5">
             <div class="col-12 col-sm-1 col-xl-2">
@@ -222,7 +240,7 @@
                         <div class="tab-content d-none d-sm-block" id=pills-tabContent>
                             <div class="tab-pane position-relative fade show active" id=tab-vista-occidente-playa-santua
                                 role=tabpanel aria-labelledby=pills-profile-tab tabindex=0><img loading=lazy class=w-100
-                                    src=./media/img/02-tierra-y-mar/playa-santua-vista-occidental.webp
+                                    src='./media/img/06-vista-proyecto-piso-15/vista-occidental-piso-15.webp'
                                     alt="Playa Santua - vista occidente">
                                 <div class="info-imagen d-none d-md-block">
                                     <p><i class="fa-solid fa-compass"></i><b>Vista occidente</b> Playa Santúa.</p>
@@ -230,7 +248,7 @@
                             </div>
                             <div class="tab-pane position-relative fade" id=tab-vista-norte-playa-santua role=tabpanel
                                 aria-labelledby=pills-home-tab tabindex=0><img loading=lazy class=w-100
-                                    src=./media/img/02-tierra-y-mar/playa-santua-vista-norte.webp
+                                    src='./media/img/06-vista-proyecto-piso-15/vista-norte-piso-15.webp'
                                     alt="Playa Santua - vista norte">
                                 <div class="info-imagen d-none d-md-block">
                                     <p><i class="fa-solid fa-compass"></i><b>Vista norte</b> Playa Santúa.</p>
@@ -238,7 +256,7 @@
                             </div>
                             <div class="tab-pane position-relative fade" id=tab-vista-oriente-playa-santua role=tabpanel
                                 aria-labelledby=pills-contact-tab tabindex=0><img loading=lazy class=w-100
-                                    src=./media/img/02-tierra-y-mar/playa-santua-vista-oriente.webp
+                                    src='./media/img/06-vista-proyecto-piso-15/vista-oriente-piso-15.webp'
                                     alt="Playa Santua - vista oriente">
                                 <div class="info-imagen d-none d-md-block">
                                     <p><i class="fa-solid fa-compass"></i><b>Vista oriente</b> Playa Santúa.</p>
@@ -246,7 +264,7 @@
                             </div>
                             <div class="tab-pane position-relative fade" id=tab-vista-sur-playa-santua role=tabpanel
                                 aria-labelledby=pills-disabled-tab tabindex=0><img loading=lazy class=w-100
-                                    src=./media/img/02-tierra-y-mar/playa-santua-vista-sur.webp
+                                    src='./media/img/06-vista-proyecto-piso-15/vista-sur-piso-15.webp'
                                     alt="Playa Santua - vista sur">
                                 <div class="info-imagen d-none d-md-block">
                                     <p><i class="fa-solid fa-compass"></i><b>Vista sur</b> Playa Santúa.</p>

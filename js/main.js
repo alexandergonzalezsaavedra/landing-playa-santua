@@ -32,7 +32,6 @@ const playVid = () => {
 }
 const playVidAud = () => {
     videoSantua.play();
-    videoSantua.muted = false;
 }
 setTimeout(() => {
     playVid()
@@ -49,13 +48,11 @@ silenciarVideo.addEventListener('click', e => {
     e.preventDefault()
     videoSantua.muted = !videoSantua.muted;
     if (iconoSonidoVideo.classList.contains('fa-volume-xmark')) {
-        iconoSonidoVideo.classList.remove('fa-volume-xmark')
         iconoSonidoVideo.classList.add('fa-volume-low')
-        iconoSonidoVideo.classList.remove('pulso')
+        iconoSonidoVideo.classList.remove('fa-volume-xmark', 'pulso')
     } else {
+        iconoSonidoVideo.classList.add('fa-volume-xmark', 'pulso')
         iconoSonidoVideo.classList.remove('fa-volume-low')
-        iconoSonidoVideo.classList.add('fa-volume-xmark')
-        iconoSonidoVideo.classList.add('pulso')
     }
 }
 )

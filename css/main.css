@@ -105,7 +105,7 @@ audio {
   border-bottom: solid 2px var(--azul-agua-marina);
 }
 
-#ubicacion p,
+#vista-360 p,
 .txt-verde-oliva {
   color: var(--verde-oliva);
 }
@@ -782,54 +782,54 @@ footer {
   background: var(--azul);
   color: var(--blanco);
 }
-#ubicacion {
+#vista-360 {
   padding: 3% 0 0;
 }
-#ubicacion .img-360-santua {
+#vista-360 .img-360-santua {
   width: 100%;
   height: auto;
   cursor: pointer;
   box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3);
   transition: 0.3s;
 }
-#ubicacion .img-360-santua:hover {
+#vista-360 .img-360-santua:hover {
   transition: 0.3s;
   box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3);
   transform: scale(0.95);
 }
-#ubicacion #playa-santua-360 .modal-header {
+#vista-360 #playa-santua-360 .modal-header {
   display: flex;
   justify-content: space-between;
 }
-#ubicacion #playa-santua-360 .modal-header h3 {
+#vista-360 #playa-santua-360 .modal-header h3 {
   margin: 0;
   color: var(--verde-oliva);
 }
-#ubicacion #playa-santua-360 .modal-header .btn-cerrar {
+#vista-360 #playa-santua-360 .modal-header .btn-cerrar {
   margin-right: 0;
   font-size: 30px;
 }
-#ubicacion #playa-santua-360 .modal-body {
+#vista-360 #playa-santua-360 .modal-body {
   padding: 0;
   overflow: hidden;
 }
-#ubicacion #playa-santua-360 .modal-body iframe {
+#vista-360 #playa-santua-360 .modal-body iframe {
   position: relative;
   width: 100%;
   height: 100%;
   z-index: 0;
 }
-#ubicacion #playa-santua-360 .modal-footer p {
+#vista-360 #playa-santua-360 .modal-footer p {
   text-align: center;
   padding-left: 0;
   border-left: none;
 }
-#ubicacion #playa-santua-360 .modal-footer p a {
+#vista-360 #playa-santua-360 .modal-footer p a {
   text-decoration: none;
   color: var(--verde-oliva);
   transition: 0.5s;
 }
-#ubicacion i {
+#vista-360 i {
   width: 20px;
   color: var(--verde-bg);
 }
@@ -1066,7 +1066,7 @@ footer .datos-contacto .contacto p strong a:hover {
     right: 20px;
   }
 
-  #ubicacion p {
+  #vista-360 p {
     text-align: center;
     font-size: 13px;
   }

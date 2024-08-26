@@ -166,7 +166,7 @@ formulario.addEventListener('submit', async (e) => {
             const headers = new Headers();
             headers.append('Content-Type', 'application/json');
             const raw = JSON.stringify({
-                nombreProyecto: 'Playa SantÃºa',
+                nombreProyecto: 'Playa Santúa',
                 nombres: nombre.value,
                 apellidos: apellido.value,
                 correoElectonico: correo.value,

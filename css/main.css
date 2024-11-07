@@ -585,6 +585,7 @@ footer {
 #playa-sol-y-arena {
   position: relative;
   padding: 5% 0;
+  background: url(../media/img/comun/bg-descripcion-proyecto.png);
 }
 
 #playa-sol-y-arena .contenedor-galeria .btn-imagen-full {
@@ -650,8 +651,7 @@ footer {
 #reders {
   width: 100%;
   overflow: hidden;
-  padding: 3% 0;
-  background: url(../media/img/comun/bg-descripcion-proyecto.png);
+  padding: 5% 0;
 }
 
 .pulso {

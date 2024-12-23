@@ -147,22 +147,23 @@ formulario.addEventListener('submit', async (e) => {
         errorTelefono.innerText = '¡El teléfono obligatorio!';
         isValid = false;
     }
-    if (interesado.value === '') {
-        errorInteresado.classList.remove('d-none');
-        errorInteresado.innerText = '¡Debe seleccionar un tipo de apartamento!';
-        isValid = false;
-    }
     if (telefono.value !== '') {
         errorTelefono.classList.add('d-none');
         errorTelefono.innerText = '';
     }
+    // if (interesado.value === '') {
+    //     errorInteresado.classList.remove('d-none');
+    //     errorInteresado.innerText = '¡Debe seleccionar un tipo de apartamento!';
+    //     isValid = false;
+    // }
     if (
         nombre.value !== '' &&
         apellido.value !== '' &&
         ciudad.value !== '' &&
         correo.value !== '' &&
-        telefono.value !== '' &&
-        tyc.checked
+        telefono.value !== ''
+        //tyc.checked
+        //interesado.value !== ''
     ) {
         isValid = true;
     }

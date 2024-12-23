@@ -5,6 +5,7 @@ html {
   margin: 0;
   height: auto;
   padding: 0;
+  overflow-x: hidden;
 }
 
 #map,
@@ -24,16 +25,49 @@ html {
   stroke: #545a53;
 }
 #video-playa-santua {
+  padding: 80px 0;
   position: relative;
-  padding: 5% 0;
   z-index: 3;
   text-align: center;
+}
+#video-playa-santua h3 {
+  font-family: var(--fuente-zodiak);
+  color: var(--azul);
+  font-size: 28px;
+  padding: 0 44px;
+}
+
+#video-playa-santua p {
+  font-family: var(--fuente-zodiak-light);
+  color: var(--azul);
+  margin-top: 24px;
+  margin-bottom: 24px;
+  font-size: 14px;
+  letter-spacing: 3px;
+  padding: 0 44px;
+  line-height: 32px;
+  text-transform: uppercase;
+  font-weight: lighter;
 }
 
 #video-playa-santua iframe {
   width: 100%;
   height: 720px;
   margin: auto;
+}
+
+a.btn-informacion {
+  width: 250px;
+  text-align: center;
+  font-weight: 600;
+  margin: auto;
+  padding: 8px;
+  background: var(--azul);
+  color: #ffffff;
+  margin-top: 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 #silenciarVideo,
@@ -53,11 +87,18 @@ footer .datos-contacto .contacto p span {
   src: url(../fuentes/Zodiak-Bold.otf) format("truetype");
 }
 
+@font-face {
+  font-family: Zodiak-Light;
+  src: url(../fuentes/Zodiak-Light.otf) format("truetype");
+}
+
 :root {
   --fuente-zodiak: Zodiak-Bold;
+  --fuente-zodiak-light: Zodiak-Light;
   --fuente-jakarta: "Plus Jakarta Sans", sans-serif;
   --fuente-cursiva: "Merienda", cursive;
   --azul-agua-marina: #8bc0c6;
+  --azul-claro: #ddeff6;
   --azul: #40798f;
   --arena: #d8d3cd;
   --verde-oliva: #545a53;
@@ -329,6 +370,20 @@ footer .datos-contacto .logo img {
   height: 100dvh;
   overflow: hidden;
 }
+#hero,
+#hero .opacidad,
+#hero img.fondo-moviles {
+  width: 100%;
+  height: 100dvh;
+  overflow: hidden;
+}
+
+#hero img.fondo {
+  display: block;
+}
+#hero img.fondo-moviles {
+  display: none;
+}
 
 #menu .burger-menu .line {
   position: absolute;
@@ -405,7 +460,7 @@ footer .datos-contacto .logo img {
 
 #hero .nombre-proyecto svg {
   position: relative;
-  width: 80%;
+  width: 60%;
   margin: -5% auto auto;
   fill: #fff;
   filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7));
@@ -416,6 +471,32 @@ footer .datos-contacto .logo img {
   transition: ease-in;
   animation: 5s entrada;
   fill: #ffffff;
+}
+#hero .slogan-proyecto {
+  position: relative;
+  z-index: 100;
+  text-align: center;
+}
+#hero .slogan-proyecto p {
+  margin-top: 25px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  letter-spacing: 5px;
+  text-align: center;
+  color: var(--blanco);
+  /* font-family: var(--fuente-zodiak); */
+}
+#hero .slogan-proyecto .tipo {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 16px;
+  padding: 4px 8px;
+  letter-spacing: 5px;
+  text-align: center;
+  color: var(--blanco);
+  border-top: solid 1px var(--blanco);
+  border-bottom: solid 1px var(--blanco);
+  font-size: 13px;
 }
 
 #hero .slogan {
@@ -505,8 +586,9 @@ footer .datos-contacto .logo img {
 
 #detalles {
   margin-top: -10px;
+  background: var(--azul-claro);
 }
-#detalles,
+
 footer {
   width: 100%;
   overflow: hidden;
@@ -522,10 +604,16 @@ footer {
 #detalles .diferencial {
   width: 100%;
   margin: 30px 0;
-  padding-left: 30px;
+  padding: 0 30px;
   overflow-x: hidden;
-  border-left: solid 2px var(--azul);
-  color: var(--verde-oliva);
+}
+#detalles .diferencial h3 {
+  font-family: var(--fuente-zodiak);
+  color: var(--azul);
+  margin-bottom: 24px;
+}
+#detalles .diferencial p {
+  color: var(--azul);
 }
 #detalles .img-mapa-zoom {
   width: 100%;
@@ -580,6 +668,37 @@ footer {
   stroke-dasharray: 1570;
   fill-opacity: 1;
   animation: 5s ease-in-out forwards estructura;
+}
+
+#formularioRegistro {
+  width: 450px;
+  position: relative;
+  z-index: 200;
+  padding: 40px 20px;
+  background: rgba(255, 255, 255, 0.8);
+  text-align: center;
+}
+#formularioRegistro .header h3.title {
+  text-align: center;
+  color: #40798f;
+}
+
+#formularioRegistro .btn-enviar {
+  background-color: var(--azul);
+  color: var(--blanco);
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+#formularioRegistro p {
+  font-size: 16px;
+  line-height: 16px;
+}
+#formularioRegistro a {
+  display: block;
+  color: var(--azul);
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 16px;
 }
 
 #playa-sol-y-arena {
@@ -692,21 +811,24 @@ footer {
   background: #f7f8fb;
   border: none;
 }
-
-.contenedorFormulario .modal-content .modal-body form input::placeholder {
+.error-message {
+  font-size: 10px;
+  color: red;
+}
+.contenedorFormulario input::placeholder {
   color: #8794b1;
 }
 
-.contenedorFormulario .modal-content .modal-body form select option:not(first-child) {
+.contenedorFormulario select option:not(first-child) {
   background-color: var(--verde-oscuro);
   color: var(--blanco);
 }
 
-.contenedorFormulario .modal-content .modal-body form select {
+.contenedorFormulario select {
   color: var(--blanco);
 }
 
-.contenedorFormulario .modal-content .modal-body form input[type="checkbox"] {
+.contenedorFormulario input[type="checkbox"] {
   width: 30px;
   height: 30px;
   border-radius: 5px;
@@ -745,39 +867,38 @@ footer {
   z-index: 15;
 }
 
-.btn-registro button {
+.btn-registro a {
   position: fixed;
-  padding: 5px 40px;
-  width: auto;
+  width: 45px;
+  height: 45px;
+  padding: 0;
   left: auto;
-  right: 40px;
-  border-radius: 15px;
-  background: rgb(2 86 133);
+  right: 20px;
+  border-radius: 50%;
   color: var(--blanco);
-  bottom: 3%;
-  font-size: 20px;
-  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+  bottom: 20px;
   z-index: 100;
   transition: ease-in-out;
   animation: 5s infinite pulso;
 }
-
-.btn-registro button i {
-  position: absolute;
-  font-size: 10px;
-  top: 17px;
-  margin-left: 5px;
-  color: #00e5ff;
+.bg-1 {
+  fill: var(--azul);
+}
+.bg-2 {
+  fill: #ffffff;
+}
+.btn-registro a i {
+  margin: auto;
+  font-size: 30px;
+  color: var(--blanco);
   transition: 0.5s;
 }
 
-.btn-registro button:hover i {
+.btn-registro a:hover i {
   transition: 0.5s;
-  margin-left: 15px;
 }
 
-.btn-registro button:hover {
+.btn-registro a:hover {
   transition: 0.5s;
   background: var(--azul);
   color: var(--blanco);
@@ -974,7 +1095,41 @@ footer .datos-contacto .contacto p strong a:hover {
   }
 }
 
+.ocultar-escritorio {
+  display: none;
+}
+.ocultar-movil {
+  display: block;
+}
 @media (max-width: 550px) {
+  .ocultar-escritorio {
+    display: block;
+  }
+  .ocultar-movil {
+    display: none;
+  }
+  #hero img.fondo {
+    display: block;
+  }
+  #hero img.fondo-moviles {
+    display: none;
+  }
+  #hero .nombre-proyecto svg {
+    width: 80%;
+    margin-top: 20%;
+  }
+  #formularioRegistro {
+    width: 100%;
+  }
+  #formularioRegistro .col-12 {
+    padding: 0;
+  }
+  #formularioRegistro p {
+    font-size: 14px;
+  }
+  #formularioRegistro a {
+    font-size: 12px;
+  }
   #embed-video {
     width: 100%;
     margin: 0 auto;
@@ -1008,8 +1163,8 @@ footer .datos-contacto .contacto p strong a:hover {
   }
 
   #hero .nombre-proyecto svg {
-    width: 100%;
-    margin-top: -35%;
+    width: 60%;
+    margin-top: 25%;
   }
 
   #hero .slogan .texto-slogan {
@@ -1076,14 +1231,6 @@ footer .datos-contacto .contacto p strong a:hover {
     width: 100%;
   }
 
-  .btn-registro button {
-    width: 90%;
-    margin: auto;
-    right: auto;
-    left: auto;
-    animation: none;
-  }
-
   footer .datos-contacto {
     flex-direction: column;
   }
@@ -1104,12 +1251,9 @@ footer .datos-contacto .contacto p strong a:hover {
   footer .datos-contacto .contacto p strong {
     font-size: 18px;
   }
-  #video-playa-santua {
-    padding: 0;
-  }
   #video-playa-santua iframe {
     width: 100%;
-    height: 250px;
+    height: 230px;
     margin: auto;
   }
 }

@@ -85,6 +85,7 @@ let apellido = document.getElementById('apellido');
 let ciudad = document.getElementById('ciudad');
 let correo = document.getElementById('correo');
 let telefono = document.getElementById('telefono');
+let interesado = document.getElementById('interesado');
 let tyc = document.getElementById('terminos-condiciones');
 let mensajePreenvio = document.querySelector('#mensajePreenvio');
 // Errores
@@ -93,6 +94,7 @@ let errorApellido = document.getElementById('apellido-error');
 let errorCiudad = document.getElementById('ciudad-error');
 let errorCorreo = document.getElementById('correo-error');
 let errorTelefono = document.getElementById('telefono-error');
+let errorInteresado = document.getElementById('interesado-error');
 let errorTyC = document.getElementById('checkbox-error');
 // Obtener utms
 let url = new URL(window.location.href);
@@ -106,7 +108,7 @@ formulario.addEventListener('submit', async (e) => {
     e.preventDefault();
     if (nombre.value === '') {
         errorNombre.classList.remove('d-none');
-        errorNombre.innerText = 'Â¡El nombre es obligatorio!';
+        errorNombre.innerText = '¡El nombre es obligatorio!';
         isValid = false;
     }
     if (nombre.value !== '') {
@@ -115,7 +117,7 @@ formulario.addEventListener('submit', async (e) => {
     }
     if (apellido.value === '') {
         errorApellido.classList.remove('d-none');
-        errorApellido.innerText = 'Â¡El apellido es obligatorio!';
+        errorApellido.innerText = '¡El apellido es obligatorio!';
         isValid = false;
     }
     if (apellido.value !== '') {
@@ -124,7 +126,7 @@ formulario.addEventListener('submit', async (e) => {
     }
     if (ciudad.value === '') {
         errorCiudad.classList.remove('d-none');
-        errorCiudad.innerText = 'Â¡La ciudad es obligatoria!';
+        errorCiudad.innerText = '¡La ciudad es obligatoria!';
         isValid = false;
     }
     if (ciudad.value !== '') {
@@ -133,7 +135,7 @@ formulario.addEventListener('submit', async (e) => {
     }
     if (correo.value === '') {
         errorCorreo.classList.remove('d-none');
-        errorCorreo.innerText = 'Â¡El coreo obligatorio!';
+        errorCorreo.innerText = '¡El coreo obligatorio!';
         isValid = false;
     }
     if (correo.value !== '') {
@@ -142,7 +144,12 @@ formulario.addEventListener('submit', async (e) => {
     }
     if (telefono.value === '') {
         errorTelefono.classList.remove('d-none');
-        errorTelefono.innerText = 'Â¡El telÃ©fono obligatorio!';
+        errorTelefono.innerText = '¡El teléfono obligatorio!';
+        isValid = false;
+    }
+    if (interesado.value === '') {
+        errorInteresado.classList.remove('d-none');
+        errorInteresado.innerText = '¡Debe seleccionar un tipo de apartamento!';
         isValid = false;
     }
     if (telefono.value !== '') {

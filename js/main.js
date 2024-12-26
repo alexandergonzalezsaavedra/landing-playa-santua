@@ -2,7 +2,7 @@ window.addEventListener('load', e => {
     e.preventDefault()
 })
 
-document.querySelector('#sonidoOceano').volume = 0.35;
+//document.querySelector('#sonidoOceano').volume = 0.35;
 const estructura = document.querySelector('#activar-animacion-estructura'),
     menu = document.querySelector('#menu'),
     detalles = document.querySelector('#detalles');
@@ -164,24 +164,39 @@ formulario.addEventListener('submit', async (e) => {
             const headers = new Headers();
             headers.append('Content-Type', 'application/json');
             const raw = JSON.stringify({
-                projectName: 'Playa Santúa',
-                fuenteReg: "Landing Playa Santúa",
-                name: nombre.value,
-                email: correo.value,
-                phone_number: telefono.value,
-                origin: 1,
-                originMedia: 89,
-                projectId: 494,
+                // projectName: 'Playa Santúa',
+                // fuenteReg: "Landing Playa Santúa",
+                // name: nombre.value,
+                // email: correo.value,
+                // phone_number: telefono.value,
+                // origin: 1,
+                // originMedia: 89,
+                // projectId: 494,
+                // tipoCompra: '',
+                // precio: '',
+                // utm_source: source,
+                // utm_medium: medium,
+                // utm_campaign: campaign,
+                // habeasData: true,
+                // celular: true,
+                // sms: true,
+                // llamada: true,
+                // fisico: true,
+                nombreProyecto: 'Playa Santúa',
+                nombres: nombre.value,
+                apellidos: apellido.value,
+                correoElectonico: correo.value,
+                telefono: telefono.value,
                 tipoCompra: '',
                 precio: '',
                 utm_source: source,
                 utm_medium: medium,
                 utm_campaign: campaign,
                 habeasData: true,
-                // celular: true,
-                // sms: true,
-                // llamada: true,
-                // fisico: true,
+                celular: true,
+                sms: true,
+                llamada: true,
+                fisico: true,
             });
             const requestOptions = {
                 method: 'POST',

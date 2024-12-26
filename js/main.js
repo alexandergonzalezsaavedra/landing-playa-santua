@@ -164,11 +164,13 @@ formulario.addEventListener('submit', async (e) => {
             const headers = new Headers();
             headers.append('Content-Type', 'application/json');
             const raw = JSON.stringify({
-                nombreProyecto: 'Playa Santúa',
-                nombres: nombre.value,
-                //apellidos: apellido.value,
-                correoElectonico: correo.value,
-                telefono: telefono.value,
+                projectName: 'Playa Santúa',
+                name: nombre.value,
+                email: correo.value,
+                phone_number: telefono.value,
+                origin: 1,
+                originMedia: 89,
+                projectId: 494,
                 tipoCompra: '',
                 precio: '',
                 utm_source: source,

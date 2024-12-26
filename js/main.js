@@ -27,15 +27,15 @@ const seccionVideo = document.querySelector("#video-playa-santua")
 const videoSantua = document.getElementById("embed-video");
 const silenciarVideo = document.querySelector("#silenciarVideo")
 const iconoSonidoVideo = document.querySelector('#silenciarVideo i')
-const playVid = () => {
-    videoSantua.play();
-}
-const playVidAud = () => {
-    videoSantua.play();
-}
-setTimeout(() => {
-    playVid()
-}, 6000)
+// const playVid = () => {
+//     videoSantua.play();
+// }
+// const playVidAud = () => {
+//     videoSantua.play();
+// }
+// setTimeout(() => {
+//     playVid()
+// }, 6000)
 
 window.addEventListener('load', e => {
     e.preventDefault()
@@ -115,15 +115,15 @@ formulario.addEventListener('submit', async (e) => {
         errorNombre.innerText = '';
         errorNombre.classList.add('d-none');
     }
-    if (apellido.value === '') {
-        errorApellido.classList.remove('d-none');
-        errorApellido.innerText = '¡El apellido es obligatorio!';
-        isValid = false;
-    }
-    if (apellido.value !== '') {
-        errorApellido.classList.add('d-none');
-        errorApellido.innerText = '';
-    }
+    // if (apellido.value === '') {
+    //     errorApellido.classList.remove('d-none');
+    //     errorApellido.innerText = '¡El apellido es obligatorio!';
+    //     isValid = false;
+    // }
+    // if (apellido.value !== '') {
+    //     errorApellido.classList.add('d-none');
+    //     errorApellido.innerText = '';
+    // }
     if (ciudad.value === '') {
         errorCiudad.classList.remove('d-none');
         errorCiudad.innerText = '¡La ciudad es obligatoria!';
@@ -158,7 +158,7 @@ formulario.addEventListener('submit', async (e) => {
     // }
     if (
         nombre.value !== '' &&
-        apellido.value !== '' &&
+        //apellido.value !== '' &&
         ciudad.value !== '' &&
         correo.value !== '' &&
         telefono.value !== ''
@@ -176,7 +176,7 @@ formulario.addEventListener('submit', async (e) => {
             const raw = JSON.stringify({
                 nombreProyecto: 'Playa Santúa',
                 nombres: nombre.value,
-                apellidos: apellido.value,
+                //apellidos: apellido.value,
                 correoElectonico: correo.value,
                 telefono: telefono.value,
                 tipoCompra: '',

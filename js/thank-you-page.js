@@ -1,4 +1,4 @@
-document.querySelector("#sonidoOceano").volume = .35;
+//document.querySelector("#sonidoOceano").volume = .35;
 const estructura = document.querySelector("#activar-animacion-estructura"),
     menu = document.querySelector("#menu"),
     detalles = document.querySelector("#detalles");
@@ -6,9 +6,9 @@ let pathsEstructura = document.querySelectorAll(".animacionEstructura"),
     audio = document.querySelector("#sonidoOceano"),
     iconoSonido = document.querySelector("#silenciarMar i"),
     burgerToggle = document.querySelector("#burger-toggle");
-const solenciarMar = () => {
-    audio.classList.contains("silenciar") ? (audio.classList.remove("silenciar"), audio.play(), iconoSonido.classList.remove("fa-volume-low"), iconoSonido.classList.add("fa-volume-xmark")) : (audio.classList.add("silenciar"), audio.pause(), iconoSonido.classList.add("fa-volume-low"), iconoSonido.classList.remove("fa-volume-xmark"))
-};
+// const solenciarMar = () => {
+//     audio.classList.contains("silenciar") ? (audio.classList.remove("silenciar"), audio.play(), iconoSonido.classList.remove("fa-volume-low"), iconoSonido.classList.add("fa-volume-xmark")) : (audio.classList.add("silenciar"), audio.pause(), iconoSonido.classList.add("fa-volume-low"), iconoSonido.classList.remove("fa-volume-xmark"))
+// };
 document.addEventListener("click", (e => {
     e.target.matches(".enlaceMenu") && (burgerToggle.checked = !1)
 })), window.addEventListener("scroll", (() => {

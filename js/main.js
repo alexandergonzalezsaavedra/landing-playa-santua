@@ -115,15 +115,6 @@ formulario.addEventListener('submit', async (e) => {
         errorNombre.innerText = '';
         errorNombre.classList.add('d-none');
     }
-    // if (apellido.value === '') {
-    //     errorApellido.classList.remove('d-none');
-    //     errorApellido.innerText = '¡El apellido es obligatorio!';
-    //     isValid = false;
-    // }
-    // if (apellido.value !== '') {
-    //     errorApellido.classList.add('d-none');
-    //     errorApellido.innerText = '';
-    // }
     if (ciudad.value === '') {
         errorCiudad.classList.remove('d-none');
         errorCiudad.innerText = '¡La ciudad es obligatoria!';
@@ -158,7 +149,6 @@ formulario.addEventListener('submit', async (e) => {
     // }
     if (
         nombre.value !== '' &&
-        //apellido.value !== '' &&
         ciudad.value !== '' &&
         correo.value !== '' &&
         telefono.value !== ''

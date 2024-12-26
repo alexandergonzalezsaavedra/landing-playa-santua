@@ -954,7 +954,14 @@ footer {
   width: 20px;
   color: var(--verde-bg);
 }
-
+.enviarInformacion {
+  position: relative;
+  text-align: center;
+  z-index: 50;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+}
 footer .datos-contacto {
   display: flex;
   justify-content: center;

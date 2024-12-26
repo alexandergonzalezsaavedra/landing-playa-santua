@@ -180,54 +180,72 @@
                 </div>
                 <div class="col-12 col-sm-6 col-md-6 d-flex justify-content-center">
                     <form id=formularioRegistro class="px-4 pb-4 rounded-3 form-bg">
-                                <div class="header">
-                                    <h3 class=title>¡Regístrese ahora!</h3>
+                        <div class="header">
+                            <h3 class=title>¡Regístrese ahora!</h3>
+                        </div>
+                        <div class=row>
+                            <div class=col-sm-12>
+                                <p>
+                                    para conocer todos los detalles de este exclusivo proyecto frente al mar.
+                                </p>
+                            </div>
+                        </div>
+                        <div class=row>
+                            <div class="col-12 mb-2"><input class=form-control id=nombre placeholder="*Nombres y apellidos">
+                                <div id=nombre-error class=error-message></div>
+                            </div>
+                            <div class="col-12 mb-2"><input class=form-control id=ciudad placeholder=*Ciudad>
+                                <div id=ciudad-error class=error-message></div>
+                            </div>
+                            <div class="col-12 mb-2"><input type=email class=form-control id=correo
+                                    placeholder="*Correo electrónico">
+                                <div id=correo-error class=error-message></div>
+                            </div>
+                            <div class="col-12 mb-2"><input type=tel class=form-control id=telefono
+                                    placeholder=*Teléfono>
+                                <div id=telefono-error class=error-message></div>
+                            </div>
+                            <!-- <div class="col-12 mb-2"> -->
+                                <!-- <select class="form-control" name="interesado" id="interesado" >
+                                    <option value="">*Seleccione el tipo de apartamento</option>
+                                    <option value="Apartamento uno">Apartamento uno</option>
+                                    <option value="Apartamento dos">Apartamento dos</option>
+                                    <option value="Apartamento tres">Apartamento tres</option>
+                                </select> -->
+                                <!-- <div id=interesado-error class=error-message></div> -->
+                            <!-- </div> -->
+                            <div class="row d-flex justify-content-between mb-2">
+                                <div class="col-12 col-sm-12">
+                                    <a href=https://storeproyectoar.blob.core.windows.net/ar-multimedia-resources-container/CLAUSULA-DE-CONSENTIMIENTO.pdf
+                                        target=_blank>Al enviar este formulario confirma que acepta nuestra Política de tratamiento de datos</a>
                                 </div>
-                                <div class=row>
-                                    <div class=col-sm-12>
-                                        <p>
-                                            para conocer todos los detalles de este exclusivo proyecto frente al mar.
-                                        </p>
-                                    </div>
+                                <div class=col-sm-12>
+                                    <div id=checkbox-error class=error-message></div>
                                 </div>
-                                <div class=row>
-                                    <div class="col-12 mb-2"><input class=form-control id=nombre placeholder="*Nombres y apellidos">
-                                        <div id=nombre-error class=error-message></div>
-                                    </div>
-                                    <div class="col-12 mb-2"><input class=form-control id=ciudad placeholder=*Ciudad>
-                                        <div id=ciudad-error class=error-message></div>
-                                    </div>
-                                    <div class="col-12 mb-2"><input type=email class=form-control id=correo
-                                            placeholder="*Correo electrónico">
-                                        <div id=correo-error class=error-message></div>
-                                    </div>
-                                    <div class="col-12 mb-2"><input type=tel class=form-control id=telefono
-                                            placeholder=*Teléfono>
-                                        <div id=telefono-error class=error-message></div>
-                                    </div>
-                                    <div class="col-12 mb-2">
-                                        <!-- <select class="form-control" name="interesado" id="interesado" >
-                                            <option value="">*Seleccione el tipo de apartamento</option>
-                                            <option value="Apartamento uno">Apartamento uno</option>
-                                            <option value="Apartamento dos">Apartamento dos</option>
-                                            <option value="Apartamento tres">Apartamento tres</option>
-                                        </select> -->
-                                        <div id=interesado-error class=error-message></div>
-                                    </div>
-                                    <div class="row d-flex justify-content-between mb-2">
-                                        <div class="col-12 col-sm-12">
-                                            <a href=https://storeproyectoar.blob.core.windows.net/ar-multimedia-resources-container/CLAUSULA-DE-CONSENTIMIENTO.pdf
-                                                target=_blank>Al enviar este formulario confirma que acepta nuestra Política de tratamiento de datos</a>
-                                        </div>
-                                        <div class=col-sm-12>
-                                            <div id=checkbox-error class=error-message></div>
-                                        </div>
-                                    </div>
-                                    <div id=button-error class=error-message></div>
-                                    <div id=button-notify class=notification-message></div><button
-                                        class="btn btn-enviar" type=submit>Enviar</button>
-                                </div>
-                            </form>
+                            </div>
+                            <div id=button-error class=error-message></div>
+                            <div id=button-notify class=notification-message></div><button
+                                class="btn btn-enviar" type=submit>Enviar</button>
+                        </div>
+                    </form>
+                    <div id="mensajePreenvio" class="enviarInformacion d-none">
+                        <div class="olas">
+                            <img src="./media/img/05-formulario/olas-y-sol-envio.gif"
+                                alt="Enviando información Playa Santúa">
+                        </div>
+                        <p>
+                            Enviando información
+                        </p>
+                        <div class="spinner-grow text-primary" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                        <div class="spinner-grow text-primary" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                        <div class="spinner-grow text-primary" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -537,7 +555,7 @@
             </div>
         </div>
     </footer>
-    <div class=contenedorFormulario>
+    <!-- <div class=contenedorFormulario>
         <div class=container>
             <div class="modal fade" id=registroUsuario aria-hidden=true aria-labelledby=registroUsuarioModalFullscreen
                 tabindex=-1>
@@ -547,7 +565,7 @@
                                 data-bs-dismiss=modal aria-label=Close><i class="fa-regular fa-circle-xmark"></i></a>
                         </div>
                         <div class=modal-body>
-                            <!-- <form id=formularioRegistro class="px-4 pb-4 rounded-3 form-bg">
+                            <form id=formularioRegistro class="px-4 pb-4 rounded-3 form-bg">
                                 <div class="modal-header">
                                     <h3 class=modal-title>¡Regístrese ahora!</h3>
                                 </div>
@@ -593,7 +611,7 @@
                                     <div id=button-notify class=notification-message></div><button
                                         class="btn btn-enviar" type=submit>Enviar</button>
                                 </div>
-                            </form> -->
+                            </form>
                             <div id="mensajePreenvio" class="enviarInformacion d-none">
                                 <div class="olas">
                                     <img src="./media/img/05-formulario/olas-y-sol-envio.gif"
@@ -617,7 +635,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <div class="row btn-registro">
         <a class=btn href="https://bit.ly/SANTUA-wa" target="_blank">
             <svg

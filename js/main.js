@@ -165,6 +165,7 @@ formulario.addEventListener('submit', async (e) => {
             headers.append('Content-Type', 'application/json');
             const raw = JSON.stringify({
                 projectName: 'Playa Santúa',
+                fuenteReg: "Landing Reserva del Mar Puerto Gaira",
                 name: nombre.value,
                 email: correo.value,
                 phone_number: telefono.value,

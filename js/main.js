@@ -178,11 +178,10 @@ formulario.addEventListener('submit', async (e) => {
                 utm_medium: medium,
                 utm_campaign: campaign,
                 habeasData: true,
-                celular: true,
-                sms: true,
-                llamada: true,
-                email: true,
-                fisico: true,
+                // celular: true,
+                // sms: true,
+                // llamada: true,
+                // fisico: true,
             });
             const requestOptions = {
                 method: 'POST',
@@ -190,16 +189,17 @@ formulario.addEventListener('submit', async (e) => {
                 body: raw,
                 redirect: 'follow',
             };
-            let data = await fetch(
-                'https://paymentsummary.herokuapp.com/zonapublica/leadsLandings/ldxFWvlb0nLMRbC6xrt8EdAjQtrd783',
-                requestOptions
-            );
-            let resData = await data.json();
-            if (resData.success === true) {
-                location.replace(
-                    `https://www.playasantua.com/thank-you-page.html?name=${nombre.value}&tel=${telefono.value}&mail=${correo.value}`
-                );
-            }
+            console.log(requestOptions)
+            // let data = await fetch(
+            //     'https://paymentsummary.herokuapp.com/zonapublica/leadsLandings/ldxFWvlb0nLMRbC6xrt8EdAjQtrd783',
+            //     requestOptions
+            // );
+            // let resData = await data.json();
+            // if (resData.success === true) {
+            //     location.replace(
+            //         `https://www.playasantua.com/thank-you-page.html?name=${nombre.value}&tel=${telefono.value}&mail=${correo.value}`
+            //     );
+            // }
         } catch (error) {
             console.log(error);
         } finally {

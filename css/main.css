@@ -566,6 +566,26 @@ footer .datos-contacto .logo img {
   font-weight: bold;
 }
 
+#ubicacion {
+  background: url("/media/img/08-ubicacion/bg-ubicacion-playa-santua.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 60px 0;
+  color: var(--blanco);
+}
+
+#ubicacion .diferencial h3 {
+  color: var(--blanco);
+  font-family: var(--fuente-zodiak);
+  font-weight: 300;
+  text-align: center;
+}
+
+#ubicacion .mapa-colombia-playa-santua {
+  width: 250px;
+  margin: auto;
+}
+
 #embed-video {
   width: 70%;
   margin: 5% auto;
@@ -1111,6 +1131,16 @@ footer .datos-contacto .contacto p strong a:hover {
 @media (max-width: 550px) {
   #detalles {
     padding: 42px 0;
+  }
+  #ubicacion .diferencial h3 {
+    padding: 0 30px;
+    font-size: 18px;
+    margin-bottom: 30px;
+    text-align: left;
+  }
+  #ubicacion p {
+    margin-top: 30px;
+    padding: 0 30px;
   }
   .ocultar-escritorio {
     display: block;

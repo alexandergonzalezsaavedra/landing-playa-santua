@@ -106,6 +106,7 @@ let regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 let isValid;
 formulario.addEventListener('submit', async (e) => {
     e.preventDefault();
+    isValid = true;
     if (nombre.value === '') {
         errorNombre.classList.remove('d-none');
         errorNombre.innerText = '¡El nombre es obligatorio!';
@@ -142,6 +143,15 @@ formulario.addEventListener('submit', async (e) => {
         errorTelefono.classList.add('d-none');
         errorTelefono.innerText = '';
     }
+    if (telefono.value.length !== 10 || isNaN(telefono.value)) {
+        errorTelefono.classList.remove('d-none');
+        errorTelefono.innerText = '¡El teléfono debe ser un campo numérico de 10 dígitos!';
+        isValid = false;
+    } else {
+        errorTelefono.innerText = '';
+        errorTelefono.classList.add('d-none');
+    }
+
     // if (interesado.value === '') {
     //     errorInteresado.classList.remove('d-none');
     //     errorInteresado.innerText = '¡Debe seleccionar un tipo de apartamento!';

@@ -59,9 +59,6 @@ silenciarVideo.addEventListener('click', e => {
 )
 
 
-
-
-
 document.addEventListener('click', (e) => {
     e.target.matches('.enlaceMenu') && (burgerToggle.checked = !1);
 }),
@@ -83,7 +80,7 @@ document.addEventListener('click', (e) => {
 const formulario = document.querySelector('#formularioRegistro');
 let nombre = document.getElementById('nombre');
 let apellido = document.getElementById('apellido');
-let ciudad = document.getElementById('ciudad');
+// let ciudad = document.getElementById('ciudad');
 let correo = document.getElementById('correo');
 let telefono = document.getElementById('telefono');
 let interesado = document.getElementById('interesado');
@@ -92,7 +89,7 @@ let mensajePreenvio = document.querySelector('#mensajePreenvio');
 // Errores
 let errorNombre = document.getElementById('nombre-error');
 let errorApellido = document.getElementById('apellido-error');
-let errorCiudad = document.getElementById('ciudad-error');
+// let errorCiudad = document.getElementById('ciudad-error');
 let errorCorreo = document.getElementById('correo-error');
 let errorTelefono = document.getElementById('telefono-error');
 let errorInteresado = document.getElementById('interesado-error');
@@ -118,15 +115,15 @@ formulario.addEventListener('submit', async (e) => {
         errorNombre.innerText = '';
         errorNombre.classList.add('d-none');
     }
-    if (ciudad.value === '') {
-        errorCiudad.classList.remove('d-none');
-        errorCiudad.innerText = '¡La ciudad es obligatoria!';
-        isValid = false;
-    }
-    if (ciudad.value !== '') {
-        errorCiudad.classList.add('d-none');
-        errorCiudad.innerText = '';
-    }
+    // if (ciudad.value === '') {
+    //     errorCiudad.classList.remove('d-none');
+    //     errorCiudad.innerText = '¡La ciudad es obligatoria!';
+    //     isValid = false;
+    // }
+    // if (ciudad.value !== '') {
+    //     errorCiudad.classList.add('d-none');
+    //     errorCiudad.innerText = '';
+    // }
     if (correo.value === '') {
         errorCorreo.classList.remove('d-none');
         errorCorreo.innerText = '¡El coreo obligatorio!';
@@ -161,7 +158,6 @@ formulario.addEventListener('submit', async (e) => {
     // }
     if (
         nombre.value !== '' &&
-        ciudad.value !== '' &&
         correo.value !== '' &&
         telefono.value !== ''
         //tyc.checked
@@ -178,7 +174,7 @@ formulario.addEventListener('submit', async (e) => {
             const raw = JSON.stringify({
 
                 name: nombre.value,
-                lastname: apellido.value,
+                lastname: "",
                 email: correo.value,
                 phone_number: telefono.value,
                 origin: 1,

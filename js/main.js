@@ -11,6 +11,7 @@ let pathsEstructura = document.querySelectorAll('.animacionEstructura'),
     audio = document.querySelector('#sonidoOceano'),
     iconoSonido = document.querySelector('#silenciarMar i'),
     burgerToggle = document.querySelector('#burger-toggle');
+
 const solenciarMar = () => {
     audio.classList.contains('silenciar')
         ? (audio.classList.remove('silenciar'),
@@ -102,6 +103,7 @@ let queryParams = new URLSearchParams(url.search);
 let source = queryParams.get('utm_source');
 let medium = queryParams.get('utm_medium');
 let campaign = queryParams.get('utm_campaign');
+let originMedia = queryParams.get("utm_origin_media");
 let regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 let isValid;
 formulario.addEventListener('submit', async (e) => {
@@ -184,6 +186,7 @@ formulario.addEventListener('submit', async (e) => {
                 utm_source: source,
                 utm_medium: medium,
                 utm_campaign: campaign,
+                originMedia: originMedia ? originMedia : 130,
                 habeasData: true,
                 celular: true,
                 sms: true,

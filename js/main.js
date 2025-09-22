@@ -201,7 +201,7 @@ formulario.addEventListener('submit', async (e) => {
                 redirect: 'follow',
             };
             let data = await fetch(
-                'https://paymentsummary.herokuapp.com/zonapublica/leadsLandings/ldxFWvlb0nLMRbC6xrt8EdAjQtrd783',
+                'https://paymentsummary.herokuapp.com/zonapublica/leads/ldxFWvlb0nLNRbC6xqz0NjA2QFUkI86l',
                 requestOptions
             );
             let resData = await data.json();

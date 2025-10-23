@@ -159,6 +159,7 @@ audio {
 }
 
 #vista-360 p,
+#maqueta-virtual p,
 .txt-verde-oliva {
   color: var(--verde-oliva);
 }
@@ -810,6 +811,29 @@ footer {
   color: var(--azul);
 }
 
+#planos .nav-link{
+  color: var(--blanco);
+  background-color: var(--azul);
+  border-radius: 8px;
+  margin: auto;
+  width: 200px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#planos .nav-link.active {
+  background-color: #092d32;
+  color: var(--blanco);
+  transition: 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#planos .nav-link:hover {
+  background-color:#5fa3b0;
+  color: var(--blanco);
+  transition: 0.3s;
+}
+
 .tab-content > .tab-pane:not(.active) {
   display: none !important;
 }
@@ -1020,54 +1044,65 @@ footer {
   background: var(--azul);
   color: var(--blanco);
 }
-#vista-360 {
+#vista-360,
+#maqueta-virtual {
   padding: 3% 0 0;
 }
-#vista-360 .img-360-santua {
+#vista-360 .img-360-santua,
+#maqueta-virtual .img-maqueta-virtual-santua {
   width: 100%;
   height: auto;
   cursor: pointer;
   box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3);
   transition: 0.3s;
 }
-#vista-360 .img-360-santua:hover {
+#vista-360 .img-360-santua:hover,
+#maqueta-virtual .img-maqueta-virtual-santua:hover {
   transition: 0.3s;
   box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3);
   transform: scale(0.95);
 }
-#vista-360 #playa-santua-360 .modal-header {
+#vista-360 #playa-santua-360 .modal-header,
+#maqueta-virtual #playa-santua-maqueta-virtual .modal-header {
   display: flex;
   justify-content: space-between;
 }
-#vista-360 #playa-santua-360 .modal-header h3 {
+#vista-360 #playa-santua-360 .modal-header h3,
+#maqueta-virtual #playa-santua-maqueta-virtual .modal-header h3 {
   margin: 0;
   color: var(--verde-oliva);
 }
-#vista-360 #playa-santua-360 .modal-header .btn-cerrar {
+#vista-360 #playa-santua-360 .modal-header .btn-cerrar,
+#maqueta-virtual #playa-santua-maqueta-virtual .modal-header .btn-cerrar {
   margin-right: 15px;
   font-size: 30px;
 }
-#vista-360 #playa-santua-360 .modal-body {
+#vista-360 #playa-santua-360 .modal-body,
+#maqueta-virtual #playa-santua-maqueta-virtual .modal-body {
   padding: 0;
   overflow: hidden;
 }
-#vista-360 #playa-santua-360 .modal-body iframe {
+#vista-360 #playa-santua-360 .modal-body iframe,
+#maqueta-virtual #playa-santua-maqueta-virtual .modal-body iframe {
   position: relative;
   width: 100%;
   height: 100%;
   z-index: 0;
 }
-#vista-360 #playa-santua-360 .modal-footer p {
+#vista-360 #playa-santua-360 .modal-footer p,
+#maqueta-virtual #playa-santua-maqueta-virtual .modal-footer p {
   text-align: center;
   padding-left: 0;
   border-left: none;
 }
-#vista-360 #playa-santua-360 .modal-footer p a {
+#vista-360 #playa-santua-360 .modal-footer p a,
+#maqueta-virtual #playa-santua-maqueta-virtual .modal-footer p a{
   text-decoration: none;
   color: var(--verde-oliva);
   transition: 0.5s;
 }
-#vista-360 i {
+#vista-360 i,
+#maqueta-virtual i {
   width: 20px;
   color: var(--verde-bg);
 }
@@ -1358,7 +1393,8 @@ footer .datos-contacto .contacto p strong a:hover {
     right: 20px;
   }
 
-  #vista-360 p {
+  #vista-360 p,
+  #maqueta-virtual p {
     text-align: center;
     font-size: 13px;
   }

@@ -86,6 +86,11 @@ let telefono = document.getElementById('telefono');
 let interesado = document.getElementById('interesado');
 let tyc = document.getElementById('terminos-condiciones');
 let mensajePreenvio = document.querySelector('#mensajePreenvio');
+//nuevos campos
+let interesTiempoApartamento = document.getElementById('interesTiempoApartamento');
+let interesApartamento = document.getElementById('interesApartamento');
+let errorInteresTiempoApartamento = document.getElementById('interes-tiempo-error');
+let errorInteresApartamento = document.getElementById('interes-apartamento-error');
 // Errores
 let errorNombre = document.getElementById('nombre-error');
 let errorApellido = document.getElementById('apellido-error');
@@ -126,13 +131,33 @@ formulario.addEventListener('submit', async (e) => {
     // }
     if (correo.value === '') {
         errorCorreo.classList.remove('d-none');
-        errorCorreo.innerText = '¡El coreo obligatorio!';
+        errorCorreo.innerText = '¡El coreo es obligatorio!';
         isValid = false;
     }
     if (correo.value !== '') {
         errorCorreo.classList.add('d-none');
         errorCorreo.innerText = '';
     }
+    //Nuevos campos
+    if (interesTiempoApartamento.value === '') {
+        errorInteresTiempoApartamento.classList.remove('d-none');
+        errorInteresTiempoApartamento.innerText = '¡Es necesario elegir una opción!';
+        isValid = false;
+    }
+    if (interesTiempoApartamento.value !== '') {
+        errorInteresTiempoApartamento.classList.add('d-none');
+        errorInteresTiempoApartamento.innerText = '';
+    }
+    if (interesApartamento.value === '') {
+        errorInteresApartamento.classList.remove('d-none');
+        errorInteresApartamento.innerText = '¡Es necesario elegir una opción!';
+        isValid = false;
+    }
+    if (interesApartamento.value !== '') {
+        errorInteresApartamento.classList.add('d-none');
+        errorInteresApartamento.innerText = '';
+    }
+
     if (telefono.value === '') {
         errorTelefono.classList.remove('d-none');
         errorTelefono.innerText = '¡El teléfono obligatorio!';

@@ -139,7 +139,7 @@ formulario.addEventListener('submit', async (e) => {
         errorCorreo.innerText = '';
     }
     //Nuevos campos
-    if (interesTiempoApartamento.value === '') {
+    /* if (interesTiempoApartamento.value === '') {
         errorInteresTiempoApartamento.classList.remove('d-none');
         errorInteresTiempoApartamento.innerText = '¡Es necesario elegir una opción!';
         isValid = false;
@@ -157,7 +157,7 @@ formulario.addEventListener('submit', async (e) => {
         errorInteresApartamento.classList.add('d-none');
         errorInteresApartamento.innerText = '';
     }
-
+ */
     if (telefono.value === '') {
         errorTelefono.classList.remove('d-none');
         errorTelefono.innerText = '¡El teléfono obligatorio!';
@@ -207,7 +207,7 @@ formulario.addEventListener('submit', async (e) => {
                 origin: 1,
                 originMedia: originMedia ? originMedia : 130,
                 projectId: 494,
-                camposAdicionalesVisita: [{IdCampo: 224, Valor: interesTiempoApartamento.value}, {IdCampo: 225, Valor: interesApartamento.value} ],
+                //camposAdicionalesVisita: [{IdCampo: 224, Valor: interesTiempoApartamento.value}, {IdCampo: 225, Valor: interesApartamento.value} ],
                 fuenteReg: "Landing Playa Santúa",
                 utm_source: source,
                 utm_medium: medium,

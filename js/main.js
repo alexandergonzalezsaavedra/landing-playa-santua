@@ -193,6 +193,8 @@ formulario.addEventListener('submit', async (e) => {
     if (isValid) {
         formulario.classList.add('d-none');
         mensajePreenvio.classList.remove('d-none');
+        console.log(interesTiempoApartamento.value);
+        console.log(interesApartamento.value);
         try {
             const headers = new Headers();
             headers.append('Content-Type', 'application/json');
@@ -205,6 +207,7 @@ formulario.addEventListener('submit', async (e) => {
                 origin: 1,
                 originMedia: originMedia ? originMedia : 130,
                 projectId: 494,
+                camposAdicionalesVisita: [{IdCampo: 224, Valor: interesTiempoApartamento.value}, {IdCampo: 225, Valor: interesApartamento.value} ],
                 fuenteReg: "Landing Playa Santúa",
                 utm_source: source,
                 utm_medium: medium,

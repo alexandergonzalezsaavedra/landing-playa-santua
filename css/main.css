@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap);
+
 body,
 html {
   margin: 0;
@@ -15,15 +16,18 @@ body,
 html {
   width: 100%;
 }
+
 .txt-index {
   margin: 0;
   font-size: 0;
   text-decoration: none;
 }
+
 .estructura,
 .separadorTitulos .linea-1 {
   stroke: #545a53;
 }
+
 #video-playa-santua,
 #video-playa-santua-recorrido {
   padding: 80px 0;
@@ -31,6 +35,7 @@ html {
   z-index: 3;
   text-align: center;
 }
+
 #video-playa-santua h3 {
   font-family: var(--fuente-zodiak);
   color: var(--azul);
@@ -51,11 +56,12 @@ html {
   font-weight: lighter;
 }
 
-#video-playa-santua iframe{
+#video-playa-santua iframe {
   width: 100%;
   height: 720px;
   margin: auto;
 }
+
 #video-playa-santua-recorrido iframe {
   width: 100%;
   height: 720px;
@@ -134,6 +140,11 @@ audio {
 .row {
   margin-left: 0;
   margin-right: 0;
+  text-align: left;
+}
+
+.form-label {
+  margin-bottom: 2px;
 }
 
 .ocultarMenuModal {
@@ -331,7 +342,7 @@ footer .datos-contacto .logo img {
   width: 100%;
 }
 
-#menu #burger-toggle:checked ~ .overlay {
+#menu #burger-toggle:checked~.overlay {
   top: 0;
   margin-right: 0;
   transform: translateX(0);
@@ -342,16 +353,16 @@ footer .datos-contacto .logo img {
   transition: 1s ease-in-out;
 }
 
-#menu #burger-toggle:checked ~ .burger-menu .line:first-child {
+#menu #burger-toggle:checked~.burger-menu .line:first-child {
   background: #fff;
   transform: translateY(calc(var(--burger-menu-radius) / 5)) rotate(45deg);
 }
 
-#menu #burger-toggle:checked ~ .burger-menu .line:nth-child(2) {
+#menu #burger-toggle:checked~.burger-menu .line:nth-child(2) {
   transform: scaleX(0);
 }
 
-#menu #burger-toggle:checked ~ .burger-menu .line:nth-child(3) {
+#menu #burger-toggle:checked~.burger-menu .line:nth-child(3) {
   background: #fff;
   transform: translateY(calc(var(--burger-menu-radius) / -5)) rotate(-45deg);
 }
@@ -377,6 +388,7 @@ footer .datos-contacto .logo img {
   height: 100dvh;
   overflow: hidden;
 }
+
 #hero,
 #hero .opacidad,
 #hero img.fondo-moviles {
@@ -388,6 +400,7 @@ footer .datos-contacto .logo img {
 #hero img.fondo {
   display: block;
 }
+
 #hero img.fondo-moviles {
   display: none;
 }
@@ -479,11 +492,13 @@ footer .datos-contacto .logo img {
   animation: 5s entrada;
   fill: #ffffff;
 }
+
 #hero .slogan-proyecto {
   position: relative;
   z-index: 100;
   text-align: center;
 }
+
 #hero .slogan-proyecto p {
   margin-top: 25px;
   margin-bottom: 16px;
@@ -493,6 +508,7 @@ footer .datos-contacto .logo img {
   color: var(--blanco);
   /* font-family: var(--fuente-zodiak); */
 }
+
 #hero .slogan-proyecto .tipo {
   margin-left: auto;
   margin-right: auto;
@@ -512,20 +528,21 @@ footer .datos-contacto .logo img {
   text-align: center;
 }
 
-#hero .info-adicional-proyecto .precio{
+#hero .info-adicional-proyecto .precio {
   font-size: 25px;
+  margin-top: 16px;
 }
 
-#hero .info-adicional-proyecto p{
-  margin-top: 25px;
-  margin-bottom: 16px;
+#hero .info-adicional-proyecto p {
+  margin-top: 4px;
+  margin-bottom: 4px;
   font-size: 18px;
   letter-spacing: 5px;
   text-align: center;
   color: var(--blanco);
 }
 
-#hero .info-adicional-proyecto span{
+#hero .info-adicional-proyecto span {
   font-weight: bold;
 }
 
@@ -570,11 +587,13 @@ footer .datos-contacto .logo img {
 #hero .slogan p:nth-child(3) {
   font-style: italic;
 }
+
 #hero .nombre-proyecto .msjAgradecimiento .btn-regresar {
   background-color: var(--azul);
   color: var(--blanco);
   font-weight: 600;
 }
+
 #hero .msjAgradecimiento {
   position: relative;
   width: 100%;
@@ -583,15 +602,18 @@ footer .datos-contacto .logo img {
   text-align: center;
   z-index: 100;
 }
+
 #hero .msjAgradecimiento h3 {
   color: var(--blanco);
   font-size: 20px;
   text-shadow: 0 3px 3px rbga(0, 0, 0, 0.3);
 }
+
 #hero .msjAgradecimiento p {
   color: var(--blanco);
   text-shadow: 0 3px 3px rbga(0, 0, 0, 0.3);
 }
+
 #hero .msjAgradecimiento span {
   font-weight: bold;
 }
@@ -620,6 +642,7 @@ footer .datos-contacto .logo img {
   width: 70%;
   margin: 5% auto;
 }
+
 #silenciarVideo {
   display: block;
   position: absolute;
@@ -657,20 +680,24 @@ footer {
   padding: 0 30px;
   overflow-x: hidden;
 }
+
 #detalles .diferencial h3 {
   font-family: var(--fuente-zodiak);
   color: var(--azul);
   margin-bottom: 24px;
 }
+
 #detalles .diferencial p {
   color: var(--azul);
 }
+
 #detalles .img-mapa-zoom {
   width: 100%;
   height: auto;
   cursor: zoom-in;
   position: relative;
 }
+
 #detalles .icon-zoom {
   position: absolute;
   font-size: 25px;
@@ -680,30 +707,37 @@ footer {
   transition: ease-in-out;
   animation: 3s infinite pulso;
 }
+
 #detalles #mapa-playa-santua-zoom .modal-content {
   background: transparent;
   border: none;
 }
+
 #detalles #mapa-playa-santua-zoom .modal-content .modal-header h3 {
   text-align: center;
   color: #d8d3cd;
 }
+
 #detalles #mapa-playa-santua-zoom .modal-content .modal-header .btn-cerrar {
   background: none;
   color: #d8d3cd;
   margin: auto;
   font-size: 3em;
 }
+
 #detalles #mapa-playa-santua-zoom .modal-content .modal-body {
   padding: 0;
 }
+
 #detalles #mapa-playa-santua-zoom .modal-content .modal-body img {
   width: 100%;
   height: auto;
 }
+
 #detalles #mapa-playa-santua-zoom .modal-content .modal-footer {
   background: transparent;
 }
+
 .ocultarEstructura {
   opacity: 0;
   transition: 0.5s;
@@ -728,6 +762,7 @@ footer {
   background: rgba(255, 255, 255, 0.8);
   text-align: center;
 }
+
 #formularioRegistro .header h3.title {
   text-align: center;
   color: #40798f;
@@ -739,10 +774,12 @@ footer {
   font-weight: 600;
   margin-bottom: 20px;
 }
+
 #formularioRegistro p {
   font-size: 16px;
   line-height: 16px;
 }
+
 #formularioRegistro a {
   display: block;
   color: var(--azul);
@@ -809,7 +846,7 @@ footer {
 }
 
 #playa-sol-y-arena .nav-pills .nav-link.active,
-#playa-sol-y-arena .nav-pills .show > .nav-link {
+#playa-sol-y-arena .nav-pills .show>.nav-link {
   padding: 3px;
   margin: 10px 0;
   background-color: #fff;
@@ -817,7 +854,8 @@ footer {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
 
-#reders, #video-playa-santua-recorrido {
+#reders,
+#video-playa-santua-recorrido {
   width: 100%;
   overflow: hidden;
   padding: 5% 0;
@@ -832,6 +870,7 @@ footer {
 .text-var-azul {
   color: var(--azul);
 }
+
 .text-small-card {
   font-size: 11px;
 }
@@ -840,7 +879,7 @@ footer {
   color: var(--azul);
 }
 
-#planos .nav-link{
+#planos .nav-link {
   color: var(--blanco);
   background-color: var(--azul);
   border-radius: 8px;
@@ -858,12 +897,12 @@ footer {
 }
 
 #planos .nav-link:hover {
-  background-color:#5fa3b0;
+  background-color: #5fa3b0;
   color: var(--blanco);
   transition: 0.3s;
 }
 
-.tab-content > .tab-pane:not(.active) {
+.tab-content>.tab-pane:not(.active) {
   display: none !important;
 }
 
@@ -880,6 +919,7 @@ footer {
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
   transition: 0.3s;
 }
+
 #planos .card-plano:hover {
   transition: 0.3s;
   transform: scale(1.05);
@@ -914,6 +954,7 @@ footer {
   #planos .modales-planos {
     overflow: auto;
   }
+
   #planos .modales-planos img {
     width: auto;
     height: 100%;
@@ -925,6 +966,7 @@ footer {
   #planos .modales-planos {
     overflow: auto;
   }
+
   #planos .modales-planos img {
     width: auto;
     height: 100%;
@@ -935,10 +977,12 @@ footer {
 #planos .modales-planos .modal-header {
   border-bottom: none;
 }
+
 #planos .modales-planos .modal-footer {
   border-top: none;
   text-align: center;
 }
+
 #planos .modales-planos .modal-footer button {
   margin: auto;
 }
@@ -947,6 +991,7 @@ footer {
   transition: ease-in-out;
   animation: 2s infinite pulsoBoton;
 }
+
 .contenedorFormulario .modal-content {
   background: var(--blanco);
   padding: 5% 3%;
@@ -981,10 +1026,12 @@ footer {
   background: #f7f8fb;
   border: none;
 }
+
 .error-message {
   font-size: 10px;
   color: red;
 }
+
 .contenedorFormulario input::placeholder {
   color: #8794b1;
 }
@@ -1024,13 +1071,16 @@ footer {
   color: var(--blanco);
   font-weight: 600;
 }
+
 .contenedorFormulario .modal-content .modal-body .enviarInformacion .olas img {
   width: 50%;
 }
+
 .contenedorFormulario .modal-content .modal-body .enviarInformacion .spinner-grow {
   width: 15px;
   height: 15px;
 }
+
 .btn-registro {
   display: flex;
   justify-content: end;
@@ -1051,12 +1101,15 @@ footer {
   transition: ease-in-out;
   animation: 5s infinite pulso;
 }
+
 .bg-1 {
   fill: var(--azul);
 }
+
 .bg-2 {
   fill: #ffffff;
 }
+
 .btn-registro a i {
   margin: auto;
   font-size: 30px;
@@ -1073,10 +1126,12 @@ footer {
   background: var(--azul);
   color: var(--blanco);
 }
+
 #vista-360,
 #maqueta-virtual {
   padding: 3% 0 0;
 }
+
 #vista-360 .img-360-santua,
 #maqueta-virtual .img-maqueta-virtual-santua {
   width: 100%;
@@ -1085,32 +1140,38 @@ footer {
   box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3);
   transition: 0.3s;
 }
+
 #vista-360 .img-360-santua:hover,
 #maqueta-virtual .img-maqueta-virtual-santua:hover {
   transition: 0.3s;
   box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3);
   transform: scale(0.95);
 }
+
 #vista-360 #playa-santua-360 .modal-header,
 #maqueta-virtual #playa-santua-maqueta-virtual .modal-header {
   display: flex;
   justify-content: space-between;
 }
+
 #vista-360 #playa-santua-360 .modal-header h3,
 #maqueta-virtual #playa-santua-maqueta-virtual .modal-header h3 {
   margin: 0;
   color: var(--verde-oliva);
 }
+
 #vista-360 #playa-santua-360 .modal-header .btn-cerrar,
 #maqueta-virtual #playa-santua-maqueta-virtual .modal-header .btn-cerrar {
   margin-right: 15px;
   font-size: 30px;
 }
+
 #vista-360 #playa-santua-360 .modal-body,
 #maqueta-virtual #playa-santua-maqueta-virtual .modal-body {
   padding: 0;
   overflow: hidden;
 }
+
 #vista-360 #playa-santua-360 .modal-body iframe,
 #maqueta-virtual #playa-santua-maqueta-virtual .modal-body iframe {
   position: relative;
@@ -1118,23 +1179,27 @@ footer {
   height: 100%;
   z-index: 0;
 }
+
 #vista-360 #playa-santua-360 .modal-footer p,
 #maqueta-virtual #playa-santua-maqueta-virtual .modal-footer p {
   text-align: center;
   padding-left: 0;
   border-left: none;
 }
+
 #vista-360 #playa-santua-360 .modal-footer p a,
-#maqueta-virtual #playa-santua-maqueta-virtual .modal-footer p a{
+#maqueta-virtual #playa-santua-maqueta-virtual .modal-footer p a {
   text-decoration: none;
   color: var(--verde-oliva);
   transition: 0.5s;
 }
+
 #vista-360 i,
 #maqueta-virtual i {
   width: 20px;
   color: var(--verde-bg);
 }
+
 .enviarInformacion {
   position: relative;
   text-align: center;
@@ -1143,6 +1208,7 @@ footer {
   padding: 30px;
   border-radius: 16px;
 }
+
 footer .datos-contacto {
   display: flex;
   justify-content: center;
@@ -1205,6 +1271,7 @@ footer .datos-contacto .contacto p strong a:hover {
 }
 
 @keyframes olas {
+
   0%,
   100% {
     transform: scale(1, 1) translate(0, 0);
@@ -1222,6 +1289,7 @@ footer .datos-contacto .contacto p strong a:hover {
     stroke-dashoffset: 1570;
     fill-opacity: 0;
   }
+
   100% {
     fill: #545a53;
     stroke: #545a53;
@@ -1231,6 +1299,7 @@ footer .datos-contacto .contacto p strong a:hover {
 }
 
 @keyframes ocultarEstructura {
+
   0%,
   50% {
     stroke-dashoffset: 0;
@@ -1263,6 +1332,7 @@ footer .datos-contacto .contacto p strong a:hover {
 }
 
 @keyframes pulso {
+
   0%,
   100% {
     transform: scale(1);
@@ -1272,7 +1342,9 @@ footer .datos-contacto .contacto p strong a:hover {
     transform: scale(1.1);
   }
 }
+
 @keyframes pulsoBoton {
+
   0%,
   100% {
     transform: scale(1.3);
@@ -1286,55 +1358,112 @@ footer .datos-contacto .contacto p strong a:hover {
 .ocultar-escritorio {
   display: none;
 }
+
 .ocultar-movil {
   display: block;
 }
+
 @media (max-width: 550px) {
   #detalles {
     padding: 42px 0;
   }
+
   #ubicacion .diferencial h3 {
     padding: 0 30px;
     font-size: 18px;
     margin-bottom: 30px;
     text-align: left;
   }
+
   #ubicacion p {
     margin-top: 30px;
     padding: 0 30px;
   }
+
   .ocultar-escritorio {
     display: block;
   }
+
   .ocultar-movil {
     display: none;
   }
+
   #hero img.fondo {
     display: block;
   }
+
   #hero img.fondo-moviles {
     display: none;
   }
+
   #hero .nombre-proyecto svg {
     width: 80%;
     margin-top: 20%;
   }
+
+  #hero .info-adicional-proyecto .precio {
+    font-size: 16px;
+  }
+
+  #hero .info-adicional-proyecto p,
+  #hero .info-adicional-proyecto span {
+    font-size: 12px;
+    display: block;
+  }
+
+  #hero .info-adicional-proyecto{
+    margin-bottom: 16px;
+  }
+
+.form-label {
+  margin-top: 2px;
+  font-size: 13px;
+}
+
+#formularioRegistro input, #formularioRegistro select{
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+#hero,
+#hero .opacidad,
+#hero img.fondo {
+  width: 100%;
+  height: 150dvh;
+  overflow: hidden;
+}
+
+#hero,
+#hero .opacidad,
+#hero img.fondo-moviles {
+  width: 100%;
+  height: 150dvh;
+  overflow: hidden;
+}
+
   #formularioRegistro {
     width: 100%;
+    padding-top: 24px;
   }
+
   #formularioRegistro .col-12 {
     padding: 0;
   }
+
   #formularioRegistro p {
-    font-size: 14px;
+    font-size: 13px;
+    margin-bottom: 6px;
   }
+
   #formularioRegistro a {
     font-size: 12px;
   }
+
   #embed-video {
     width: 100%;
     margin: 0 auto;
   }
+
   .titulo-seccion {
     font-size: 20px;
   }
@@ -1400,7 +1529,7 @@ footer .datos-contacto .contacto p strong a:hover {
   }
 
   #playa-sol-y-arena .nav-pills .nav-link,
-  #playa-sol-y-arena .nav-pills .show > .nav-link {
+  #playa-sol-y-arena .nav-pills .show>.nav-link {
     padding: 3px;
     margin: 10px 0;
     background-color: #fff;
@@ -1453,6 +1582,7 @@ footer .datos-contacto .contacto p strong a:hover {
   footer .datos-contacto .contacto p strong {
     font-size: 18px;
   }
+
   #video-playa-santua iframe,
   #video-playa-santua-recorrido iframe {
     width: 100%;

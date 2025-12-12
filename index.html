@@ -182,7 +182,7 @@
                         </span>
                     </div>
                     <div class="info-adicional-proyecto">
-                        <p class="precio"><span>Precio desde:</span> $558.500.000*</p>
+                        <p class="precio"><span class="precio">Precio desde:</span> $558.500.000*</p>
                         <p><span>Áreas construidas:</span> desde 36 hasta 237 m²</p>
                         <p><span>Cuota Inicial:</span> hasta 43 meses</p>
                         <p>*Precios y áreas sujetos a cambios</p>
@@ -202,19 +202,22 @@
                             </div>
                         </div>
                         <div class=row>
-                            <div class="col-12 mb-2"><input class=form-control id=nombre
-                                    placeholder="*Nombres y apellidos">
+                            <div class="col-12 mb-2">
+                                <label for="nombre" class="form-label">Nombres y apellidos:</label>
+                                <input class=form-control id=nombre placeholder="*Ej: Juan Carlos Pérez Pérez">
                                 <div id=nombre-error class=error-message></div>
                             </div>
                             <!-- <div class="col-12 mb-2"><input class=form-control id=ciudad placeholder=*Ciudad>
                                 <div id=ciudad-error class=error-message></div>
                             </div> -->
-                            <div class="col-12 mb-2"><input type=email class=form-control id=correo
-                                    placeholder="*Correo electrónico">
+                            <div class="col-12 mb-2">
+                                <label for="correo" class="form-label">Correo electrónico:</label>
+                                <input type=email class=form-control id=correo placeholder="*Ej: juanperez@hotmail.com">
                                 <div id=correo-error class=error-message></div>
                             </div>
                             <div class="col-12 mb-2">
-                                <input type="tel" class="form-control" id="telefono" placeholder="*Teléfono"
+                                <label for="telefono" class="form-label">Teléfono:</label>
+                                <input type="tel" class="form-control" id="telefono" placeholder="*Ej:3211234567"
                                     minlength="10" maxlength="10" pattern="[0-9]{10}"
                                     title="El número de teléfono debe tener exactamente 10 dígitos.">
                                 <div id="telefono-error" class="error-message"></div>
@@ -224,10 +227,10 @@
                                     apartamento:</label>
                                 <select class="form-select" id="interesTiempoApartamento">
                                     <option selected disabled value="">Selecciona una opción...</option>
-                                    <option value="dentroDe30Dias">Dentro de 30 días</option>
-                                    <option value="en2a3Meses">En 2 a 3 meses</option>
-                                    <option value="en3a6Meses">En 3 a 6 meses</option>
-                                    <option value="enMasDe6Meses">En más de 6 meses</option>
+                                    <option value="DENTRO DE LOS PROXIMOS 30 DIAS">Dentro de 30 días</option>
+                                    <option value="EN 2 O 3 MESES">En 2 a 3 meses</option>
+                                    <option value="DE 3 A 6 MESES">En 3 a 6 meses</option>
+                                    <option value="EN MAS DE 6 MESES">En más de 6 meses</option>
                                 </select>
                                 <div id="interes-tiempo-error" class="error-message"></div>
                             </div>
@@ -236,10 +239,10 @@
                                     de:</label>
                                 <select class="form-select" id="interesApartamento">
                                     <option selected disabled value="">Selecciona una opción...</option>
-                                    <option value="395De558Millobes">39.5 m² desde $558 millones</option>
-                                    <option value="67De846Millones">67 m² desde $846 millones</option>
-                                    <option value="1165De1862Millones">116.5 m² desde: $1.862 millones</option>
-                                    <option value="237De3631Millones">237 m² desde $3.631 millones</option>
+                                    <option value="39.5 m2 desde 556 millones">39.5 m² desde $558 millones</option>
+                                    <option value="67 m2 desde 846 millones">67 m² desde $846 millones</option>
+                                    <option value="116.5 m2 desde 1.862 millones">116.5 m² desde: $1.862 millones</option>
+                                    <option value="237 m2 desde 3.631 millones">237 m² desde $3.631 millones</option>
                                 </select>
                                 <div id="interes-apartamento-error" class="error-message"></div>
                             </div>
